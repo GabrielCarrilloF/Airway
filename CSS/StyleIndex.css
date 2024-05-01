@@ -1,3 +1,5 @@
-body {
-    background-color: blue;
+/* styles.css */
+#icono-pagina {
+    width: 64px; /* Ajusta el tamaño según sea necesario */
+    height: 64px; /* Ajusta el tamaño según sea necesario */
 }
