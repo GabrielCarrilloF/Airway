@@ -10,3 +10,8 @@
 .main-banner .header-text .advertisement-Rio h2 {
     color: darkolivegreen; /* Cambiar el color del texto dentro del h2 a negro */
 }
+
+.row .item .span{
+    color: black;
+    font-weight: bold;
+}
