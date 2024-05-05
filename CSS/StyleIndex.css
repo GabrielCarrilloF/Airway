@@ -1,5 +1,12 @@
 /* styles.css */
-#icono-pagina {
-    width: 64px; /* Ajusta el tamaño según sea necesario */
-    height: 64px; /* Ajusta el tamaño según sea necesario */
+.main-banner .header-text .advertisement-Cartagena h2 {
+    color: black; /* Cambiar el color del texto dentro del h2 a negro */
+}
+
+.main-banner .header-text .advertisement-Medellin h2 {
+    color: aqua; /* Cambiar el color del texto dentro del h2 a negro */
+}
+
+.main-banner .header-text .advertisement-Rio h2 {
+    color: darkolivegreen; /* Cambiar el color del texto dentro del h2 a negro */
 }
