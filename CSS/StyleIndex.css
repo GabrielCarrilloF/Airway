@@ -15,3 +15,21 @@
     color: black;
     font-weight: bold;
 }
+
+.container-fluid {
+    border: saddlebrown;
+}
+
+.info-trip-card {
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .161);
+}
+
+.Container-Compani img {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+

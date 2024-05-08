@@ -1221,18 +1221,9 @@ Contact Style
 --------------------------------------------- 
 */
 
-.contact {
-  background-image: url(../images/contact-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  padding: 100px 0px 250px 0px;
-  position: relative;
-}
 
-.contact .section-heading h2 {
-  color: #fff;
-}
+
+
 
 .contact-content {
   margin-top: -240px;
