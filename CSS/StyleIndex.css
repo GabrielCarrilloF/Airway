@@ -33,3 +33,132 @@
     margin-bottom: 5px;
 }
 
+/* -------------------------------------------*/
+
+.custom-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+  .custom-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .custom-form-control,
+  .custom-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .custom-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #d93d00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-btn-primary {
+    background-color: #d93d00;
+  }
+  
+  .custom-btn:hover {
+    background-color: #d93d00;
+  }
+  
+  .star {
+    font-size: 25px;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .star:hover,
+  .star:hover ~ .star {
+    color: #ffcc00;
+  }
+  
+  .star:checked,
+  .star:checked ~ .star {
+    color: #ffcc00;
+  }
+  
+  /*---------------------------*/
+  #chat-container {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+  }
+  
+  #chat-container.chat-visible {
+    transform: translateY(0);
+  }
+  
+  #chat-box {
+    height: 200px;
+    overflow-y: auto;
+  }
+  
+  .message {
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .received {
+    background-color: #f0f0f0;
+  }
+  
+  .sent {
+    background-color: #d93d00;
+    color: #fff;
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 60px);
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #ff4800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
