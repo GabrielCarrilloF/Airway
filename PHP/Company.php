@@ -62,13 +62,13 @@ https://templatemo.com/tm-591-villa-agency
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="../index.html" class="logo">
               <h1 id="NameCompany">Brasilia</h1>
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index.html">Salir</a></li>
+              <li><a href="../index.html">Salir</a></li>
             </ul>
 
           </nav>
@@ -109,7 +109,7 @@ https://templatemo.com/tm-591-villa-agency
         </li>
       </ul>
       <div class="row properties-box">
-      <?php
+        <?php
 $connection_obj = mysqli_connect("localhost", "root", "", "Airway");
 if (!$connection_obj) {
     echo "Error No: " . mysqli_connect_errno();
@@ -144,7 +144,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
 // close the db connection
 mysqli_close($connection_obj);
 ?>
-</div>
+      </div>
       <div class="row properties-box">
         <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
           <div class="item">
@@ -159,7 +159,7 @@ mysqli_close($connection_obj);
               <li>Destino: <span>Cali</span></li>
             </ul>
           </div>
-          
+
         </div>
       </div>
       <div class="row">
@@ -409,23 +409,23 @@ mysqli_close($connection_obj);
     </div>
   </div>
   <div id="myModal" class="modal-2">
-        <div class="modal-content-2">
-            <span class="close-2">&times;</span>
-            <h4>¡FELICIDADES CACHON!</h4>
-            <img src="../Images/chulito verde.gif" alt="Chulito animado">
-            <p><b>MUY BIEN, TU TIQUETE FUE COMPRADO CON EXITO POR FIN TE VAS A LARGAR!</b></p>
-            <button id="acceptModalBtn" class="acceptModalBtn">Aceptar</button>
-        </div>
+    <div class="modal-content-2">
+      <span class="close-2">&times;</span>
+      <h4>¡FELICIDADES CACHON!</h4>
+      <img src="../Images/chulito verde.gif" alt="Chulito animado">
+      <p><b>MUY BIEN, TU TIQUETE FUE COMPRADO CON EXITO POR FIN TE VAS A LARGAR!</b></p>
+      <button id="acceptModalBtn" class="acceptModalBtn">Aceptar</button>
     </div>
-    <div id="myotromodal" class="modal2-2">
-        <div class="modal-content2-2">
-            <span class="close2-2">&times;</span>
-            <h4>¡LO SENTIMOS!</h4>
-            <img src="../Images/x.gif" alt="x animada">
-            <p><b>ALGO SALIÓ MAL, INTENTALO DE NUEVO!</b></p>
-            <button id="acceptModalBtn2" class="acceptModalBtn">Cerrar</button>
-        </div>
+  </div>
+  <div id="myotromodal" class="modal2-2">
+    <div class="modal-content2-2">
+      <span class="close2-2">&times;</span>
+      <h4>¡LO SENTIMOS!</h4>
+      <img src="../Images/x.gif" alt="x animada">
+      <p><b>ALGO SALIÓ MAL, INTENTALO DE NUEVO!</b></p>
+      <button id="acceptModalBtn2" class="acceptModalBtn">Cerrar</button>
     </div>
+  </div>
   <footer>
     <div class="container">
       <div class="col-lg-12">
