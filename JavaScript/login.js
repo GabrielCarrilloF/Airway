@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             console.error("No se encontró el modal con el ID modal-765830.");
         }
-    }, 1000000000000); // Espera 5 segundos (5000 milisegundos)
+    }, 50000); // Espera 5 segundos (5000 milisegundos)
 });
 
 /*----------------------------------*/ 

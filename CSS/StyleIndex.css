@@ -161,4 +161,36 @@
     align-items: center;
   }
   
-  
+  /* esto son los comentarios de los usuarios en el index */
+
+  .containercomments {
+    display: inline-block;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fdf5f1;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:15%;
+}
+
+
+/*  estrellas */
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  font-size: 24px;
+  color: gold; 
+
+  @media (max-width: 768px) {
+    width: 100%;
+}
+}
+
+
