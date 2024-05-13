@@ -71,13 +71,3 @@ const NameOriginal = document.getElementById('NameCompany');
 const NameCompany = document.getElementById('Company');
 
 NameCompany.value = NameOriginal.textContent;
-
-// Obtener los parámetros de la URL
-const urlParams = new URLSearchParams(window.location.search);
-        
-// Verificar el valor del parámetro "success"
-if (urlParams.get('success') === 'true') {
-    alert("¡Datos guardados exitosamente!");
-} else if (urlParams.get('success') === 'false') {
-    alert("Error al guardar los datos. Inténtalo de nuevo.");
-}

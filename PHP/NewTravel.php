@@ -13,6 +13,12 @@ $Duration = $_POST['Duration'];
 $Price = $_POST['Price'];
 $Company = $_POST['Company'];
 
+if ($City1==$City2){
+    // Redirigir a otro archivo HTML y mostrar un alert de NO éxito
+    header("Location: Company.php.?success=false");
+    exit();
+}
+
 // Consulta SQL para obtener los códigos de las ciudades
 $query = "SELECT * FROM City WHERE NameCity IN ('$City1', '$City2')";
 // Ejecutar la consulta SELECT

@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="../BOOTSTRAP/assets/css/owl.css">
   <link rel="stylesheet" href="../BOOTSTRAP/assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <!--CSS-->
+  <link rel="stylesheet" href="../CSS/alert.css">
   <!--
 
 TemplateMo 591 villa agency
@@ -516,6 +518,24 @@ https://templatemo.com/tm-591-villa-agency
       </div>
     </div>
   </div>
+  <div id="myModal" class="modal-2">
+        <div class="modal-content-2">
+            <span class="close-2">&times;</span>
+            <h4>¡FELICIDADES CACHON!</h4>
+            <img src="../Images/chulito verde.gif" alt="Chulito animado">
+            <p><b>MUY BIEN, TU TIQUETE FUE COMPRADO CON EXITO POR FIN TE VAS A LARGAR!</b></p>
+            <button id="acceptModalBtn" class="acceptModalBtn">Aceptar</button>
+        </div>
+    </div>
+    <div id="myotromodal" class="modal2-2">
+        <div class="modal-content2-2">
+            <span class="close2-2">&times;</span>
+            <h4>¡LO SENTIMOS!</h4>
+            <img src="../Images/x.gif" alt="x animada">
+            <p><b>ALGO SALIÓ MAL, INTENTALO DE NUEVO!</b></p>
+            <button id="acceptModalBtn2" class="acceptModalBtn">Cerrar</button>
+        </div>
+    </div>
   <footer>
     <div class="container">
       <div class="col-lg-12">
@@ -529,6 +549,7 @@ https://templatemo.com/tm-591-villa-agency
 
   <!-- Scripts -->
   <script src="../JavaScript/Company.js"></script>
+  <script src="../JavaScript/alert.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script src="../BOOTSTRAP/vendor/jquery/jquery.min.js"></script>
   <script src="../BOOTSTRAP/vendor/bootstrap/js/bootstrap.min.js"></script>
