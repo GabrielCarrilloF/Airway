@@ -1,0 +1,95 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #ff7f00; 
+    box-shadow: 0 0 0 0.2rem rgba(255, 127, 0, 0.25); 
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #495057;
+  }
+  
+  .btn-enviar {
+    background-color: #ff7f00; 
+    border-color: #ff7f00; 
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-enviar:hover {
+    background-color: #e66000; 
+    border-color: #e66000; 
+  }
+  
+  #Table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #Table th,
+  #Table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+  }
+  
+  #Table th {
+    background-color: #ff7f00; 
+    color: #ffffff;
+  }
+  
+  #Table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+  }
+  
+  #Table i {
+    color: #ff7f00; 
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  
+  body {
+    background-image: url('https://www.originaltravel.co.uk/travel-blog/ShowPhoto/3400/0'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; 
+  }
+
+.btn-cerrar {
+    background-color: #ff7f00;
+    border-color: #ff7f00;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-cerrar:hover {
+    background-color: #e66000;
+    border-color: #e66000;
+  }
+
+  
+  
