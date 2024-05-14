@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 50000); // Espera 5 segundos (5000 milisegundos)
 });
 
-/*----------------------------------*/ 
+/*---------------chat box-------------------*/ 
 function toggleChat() {
     var chatContainer = document.getElementById("chat-container");
     chatContainer.classList.toggle("chat-visible");
@@ -38,3 +38,33 @@ function toggleChat() {
     chatBox.scrollTop = chatBox.scrollHeight;
   }
   
+
+
+    // el modal
+    var modal = document.getElementById('reservationModal');
+
+    // botón que abre el modal
+    var btn = document.querySelectorAll('.main-button a');
+    
+    // <span> que cierra el modal
+    var span = document.getElementsByClassName('close')[0];
+    
+    // Cuando el usuario haga clic en el botón se abre el modal
+    btn.forEach(function(button) {
+      button.addEventListener('click', function() {
+        modal.style.display = 'block';
+      });
+    });
+    
+    // Cuando el usuario haga clic en la (x) se cierra el modal
+    span.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+    
+    // Cuando el usuario haga clic fuera del modal tmb se cierra
+    window.addEventListener('click', function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
+
