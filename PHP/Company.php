@@ -93,13 +93,13 @@ https://templatemo.com/tm-591-villa-agency
     <div class="container">
       <ul class="properties-filter">
         <li>
-          <a class="is_active" href="#" data-filter="*">Ver todo</a>
+          <a class="is_active" href="Company.php" data-filter="*">Ver todo</a>
         </li>
         <li>
           <a id="modal-394784" href="#modal-container-394784" role="button" class="btn" data-toggle="modal">Agregar</a>
         </li>
         <li>
-          <a href="#">Actializar</a>
+          <a href="#" onclick="updatePage()">Actualizar</a>
         </li>
         <li>
           <a href="#">Eliminar</a>
@@ -108,6 +108,7 @@ https://templatemo.com/tm-591-villa-agency
           <a href="#">Nuevo paquete</a>
         </li>
       </ul>
+
       <div class="row properties-box">
         <?php
 $connection_obj = mysqli_connect("localhost", "root", "", "Airway");
@@ -123,18 +124,32 @@ $result = mysqli_query($connection_obj, $query) or die(mysqli_error($connection_
 
 // Recorrer los resultados de la consulta
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+  $price = $row['Price'];
+$formatted_price = number_format($price, 0, '.', '.');
+
+$query2 = "SELECT * FROM City WHERE CodeCity IN ('$row[CodeCity_Origen]', '$row[CodeCity_Destin]')";
+// Ejecutar la consulta SELECT
+$result2 = mysqli_query($connection_obj, $query2) or die(mysqli_error($connection_obj));
+
+while ($row2 = mysqli_fetch_array($result2, MYSQLI_BOTH)) {
+    if ($row2['CodeCity'] == $row['CodeCity_Origen']) {
+        $City_Origen = $row2['NameCity'];
+    } elseif ($row2['CodeCity'] == $row['CodeCity_Destin']) {
+        $City_Destin = $row2['NameCity'];
+    }
+}
     echo '
     <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
         <div class="item">
             <a href="property-details.html"><img src="../Images/Companis-icon/Brasilia.png" alt=""></a>
-            <span class="category">Brasilia</span>
-            <h6>$' . $row['Price'] . '</h6>
-            <h4><a href="property-details.html">De Cartagena a cali</a></h4>
+            <span class="category">' . $row['Compani'] . '</span>
+            <h6>$' . $formatted_price . '</h6>
+            <h4><a href="property-details.html">De '.$City_Origen.' a '.$City_Destin.'</a></h4>
             <ul>
                 <li>Distancia: <span>' . $row['Distance'] . '</span></li>
                 <li>Diracion: <span>' . $row['duration_time'] . '</span></li>
                 <li>Salida: <span>' . $row['CodeCity_Origen'] . '</span></li>
-                <li>Destino: <span>Cali</span></li>
+                <li>Destino: <span>'. $row['CodeCity_Destin'] .'</span></li>
             </ul>
         </div>
     </div>
@@ -440,6 +455,7 @@ mysqli_close($connection_obj);
   <!-- Scripts -->
   <script src="../JavaScript/Company.js"></script>
   <script src="../JavaScript/alert.js"></script>
+  <script src="../JavaScript/Neveg.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script src="../BOOTSTRAP/vendor/jquery/jquery.min.js"></script>
   <script src="../BOOTSTRAP/vendor/bootstrap/js/bootstrap.min.js"></script>
