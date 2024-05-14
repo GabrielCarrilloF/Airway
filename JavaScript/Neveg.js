@@ -1,3 +1,3 @@
 function updatePage() {
-    window.location.href = "Actualizar.html";
+    window.location.href = "Actualizar.php";
 }
