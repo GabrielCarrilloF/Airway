@@ -7,22 +7,48 @@
     <link rel="stylesheet" href="CSS/vuelos.css">
 </head>
 <body>
+    
     <div class="image-container">
-        <img src="Images/LogPNG.jpg" alt="Imagen">
         <div class="overlay">
             <div class="window">
-                <h2>Título de la ventana</h2>
-                <p>Contenido de la ventana que no se puede cerrar ni mover.</p>
+                
           
-    <div class="search-container">
-        <input type="text" id="myInput" onkeyup="autocomplete()" placeholder="Escribe algo...">
+    <div class="search-container">Ciudad origen:
+        <input type="text" id="myInput" onkeyup="autocomplete()" placeholder="Ciudad origen...">
         <div id="autocomplete-list" class="autocomplete-items">
         </div>
       </div>
+      <div class="search-container2">Ciudad destino:
+        <input type="text" id="myInput2" onkeyup="autocomplete()" placeholder="Ciudad destino...">
+        <div id="autocomplete-list2" class="autocomplete-items2">
+        </div>
+      </div>
+      <div class="fechaida">Fecha ida:
+        <input type="date" id="date">
+      </div>
+      <div class="fecharegreso">Fecha Regreso:
+        <input type="date" id="dater">
+    </div>
+    <div class="pasajeros">Cantidad de adultos:
+        <input type="number" id="pasajeros">
+    </div>
+    <div class="niños">Cantidad de niños:
+    <input type="number" id="niños">
+    </div>
+    <div class="clase">Tipo de clase:
+        <select name="clase" id="clase"><option></option>
+           <option>primera clase</option>
+         <option>Clase ejecutiva</option>
+         <option>Clase económica premium</option>
+        <option>Clase economica</option>
+        </select>
     </div>
 </div>
 </div>
 
+
+
+     
       <script src="JavaScript/vuelos.js"></script>
 </body>
 </html>
