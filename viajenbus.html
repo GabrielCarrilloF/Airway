@@ -4,8 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="CSS/viajenbus.css">
 </head>
 <body>
-    <h1>VAS A VIAJAR EN BUS CACHON POBRE</h1>
+
+    <div class="container-mensajesuperior">
+        <div class="rowsup">
+            <div class="col-md-12sup">
+                <div class="alert alert-success alert-dismissablesup">
+                    
+                    </button>
+                    <center>
+                    <h1>
+                       GRACIAS POR PREFERIRNOS! 
+                    </h1> <strong>Warning!</strong> Best check yo self, you're not looking too good. <a href="#" class="alert-link">alert link</a>
+                </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="image-containerbus">
+        <div class="overlaybus">
+            <div class="windowbus">
+
+    <div class="image-containerbus">
+        <div class="overlaybus">
+            <div class="windowbus">
+                
+              <div class="opciones-viajesbus">
+                <button id="idaYVueltaBtnbus" class="seleccionadobus">Ida y vuelta</button>
+                <button id="soloIdaBtnbus">Solo ida</button>
+              </div><br>
+    <div class="search-containerbus"><b>Ciudad origen:</b>
+        <input type="text" id="myInputbus" onkeyup="autocomplete()" placeholder="Ciudad origen...">
+        <div id="autocomplete-listbus" class="autocomplete-itemsbus">
+        </div>
+      </div>
+      <div class="search-containerbus"><b>Ciudad destino:</b>
+        <input type="text" id="myInputbus" onkeyup="autocomplete()" placeholder="Ciudad destino...">
+        <div id="autocomplete-listbus" class="autocomplete-itemsbus">
+        </div>
+      </div>
+      <div class="fechaidabus"><b>Fecha ida:</b>
+        <input type="date" id="datebus">
+      </div>
+      <div class="fecharegresobus"><b>Fecha Regreso:</b>
+        <input type="date" id="daterbus">
+    </div>
+    <div class="pasajerosbus"><b>Cantidad de adultos:</b>
+        <input type="number" id="pasajerosbus" placeholder="Cantidad de adultos...">
+    </div>
+    <div class="niñosbus"><b>Cantidad de niños:</b>
+    <input type="number" id="niñosbus" placeholder="Cantidad de niños...">
+    </div>
+    <div class="clasebus"><b>Tipo de clase:</b>
+        <select name="clasebus" id="clasebus" ><option>Seleccione una clase</option>
+           <option>primera clase</option>
+         <option>Clase ejecutiva</option>
+         <option>Clase económica premium</option>
+        <option>Clase economica</option>
+        </select>
+    </div>
+    <div class="buscar-vuelos-divbus">
+			 
+			<button type="button" class="buscar-vuelosbus">
+				<b>BUSCAR</b>
+			</button>
+		</div>
+    </div>
+</div>
+</div>
+<script src="JavaScript/viajenbus.js"></script>
 </body>
 </html>
