@@ -46,18 +46,36 @@
       </div>
     </div>
   </div>
+  <?php
+    $Name = $_GET['Company'];
+    $connection_obj = mysqli_connect("localhost", "root", "", "Airway");
+if (!$connection_obj) {
+    echo "Error No: " . mysqli_connect_errno();
+    echo "Error Description: " . mysqli_connect_error();
+    exit;
+}
+// Consulta SQL para obtener los códigos de las ciudades
+$query = "SELECT * FROM CompanyBus WHERE NameCompany = '$Name'";
+
+// Ejecutar la consulta SELECT
+$result = mysqli_query($connection_obj, $query) or die(mysqli_error($connection_obj));
+$row = mysqli_fetch_array($result, MYSQLI_BOTH);
+$log = $row['Logo'];
+// close the db connection
+mysqli_close($connection_obj);
+  ?>
   <!-- ***** Preloader End ***** -->
 <header class="header-area header-sticky">
     
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="Company.php" class="logo">
-              <h1 id="NameCompany">Brasilia</h1>
+            <a href="#" class="logo">
+              <h1 id="NameCompany"><?php echo $Name; ?></h1>
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="Company.php">Home</a></li>
+              <li><a href="#">Home</a></li>
             </ul>
 
           </nav>

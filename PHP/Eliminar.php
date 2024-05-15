@@ -57,7 +57,7 @@
       <!-- ***** Logo End ***** -->
       <!-- ***** Menu Start ***** -->
       <ul class="nav">
-        <li><a href="Company.php">Home</a></li>
+        <li><a href="#" onclick="actualizarPagina()">Home</a></li>
       </ul>
 
     </nav>

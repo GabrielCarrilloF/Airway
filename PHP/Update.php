@@ -14,7 +14,7 @@ $Duration = $_POST['Duration'];
 $Price = $_POST['Price'];
 
 if ($City1==$City2){
-    // Redirigir a otro archivo HTML y mostrar un alert de NO éxito
+    
     header("Location: Actualizar.php?success=false");
     exit();
 }

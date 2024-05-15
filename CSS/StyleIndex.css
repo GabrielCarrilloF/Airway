@@ -255,3 +255,16 @@
 }
 
 
+/*=================Login=================*/
+.NewAndRecuper {
+  display: flex;
+  justify-content: space-between; /* Para separar los elementos a los extremos */
+}
+
+.left-side-1 {
+  text-align: right; /* Para alinear el texto a la derecha */
+}
+
+.right-side {
+  text-align: left; /* Para alinear el texto a la izquierda */
+}
