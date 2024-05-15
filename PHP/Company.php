@@ -102,10 +102,7 @@ https://templatemo.com/tm-591-villa-agency
           <a href="#" onclick="updatePage()">Actualizar</a>
         </li>
         <li>
-          <a href="#">Eliminar</a>
-        </li>
-        <li>
-          <a href="#">Nuevo paquete</a>
+          <a href="#" onclick="DeletePage()">Eliminar</a>
         </li>
       </ul>
 
@@ -160,21 +157,6 @@ while ($row2 = mysqli_fetch_array($result2, MYSQLI_BOTH)) {
 mysqli_close($connection_obj);
 ?>
       </div>
-      <div class="row properties-box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
-          <div class="item">
-            <a href="property-details.html"><img src="../Images/Companis-icon/Brasilia.png" alt=""></a>
-            <span class="category">Brasilia</span>
-            <h6>$3.145.000</h6>
-            <h4><a href="property-details.html">De Cartagena a cali</a></h4>
-            <ul>
-              <li>Distancia: <span>1 km</span></li>
-              <li>Diracion: <span>2h 5m</span></li>
-              <li>Salida: <span>Cartagena</span></li>
-              <li>Destino: <span>Cali</span></li>
-            </ul>
-          </div>
-
         </div>
       </div>
       <div class="row">
@@ -189,9 +171,6 @@ mysqli_close($connection_obj);
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
-        <a id="modal-394784" href="#modal-container-394784" role="button" class="btn" data-toggle="modal">Launch demo
-          modal</a>
-
         <div class="modal fade" id="modal-container-394784" role="dialog" aria-labelledby="myModalLabel"
           aria-hidden="true">
           <div class="modal-dialog" role="document">
