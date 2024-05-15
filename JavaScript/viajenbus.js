@@ -92,3 +92,69 @@ soloIdaBtn.addEventListener('click', function() {
     idaYVueltaBtn.classList.remove('seleccionado');
     fechaRegresoInput.disabled = true;
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const fechaIdaInput = document.getElementById('datebus');
+    const fechaRegresoInput = document.getElementById('daterbus');
+
+    fechaIdaInput.addEventListener('change', function() {
+        const fechaIda = new Date(fechaIdaInput.value);
+        const fechaRegreso = new Date(fechaRegresoInput.value);
+
+        if (fechaIda > fechaRegreso) {
+            alert('La fecha de regreso no puede ser anterior a la fecha de ida.');
+            fechaRegresoInput.value = ''; // Restablecer el valor del campo de fecha de regreso
+        }
+    });
+
+    fechaRegresoInput.addEventListener('change', function() {
+        const fechaIda = new Date(fechaIdaInput.value);
+        const fechaRegreso = new Date(fechaRegresoInput.value);
+
+        if (fechaIda > fechaRegreso) {
+            alert('La fecha de regreso no puede ser anterior a la fecha de ida.');
+            fechaRegresoInput.value = ''; // Restablecer el valor del campo de fecha de regreso
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const fechaIdaInput = document.getElementById('datebus');
+    const fechaRegresoInput = document.getElementById('daterbus');
+
+    fechaIdaInput.addEventListener('change', function() {
+        const fechaHoy = new Date();
+        const fechaIda = new Date(fechaIdaInput.value);
+        const fechaRegreso = new Date(fechaRegresoInput.value);
+
+        if (fechaIda < fechaHoy) {
+            alert('La fecha de ida no puede ser anterior a la fecha de hoy.');
+            fechaIdaInput.value = ''; // Restablecer el valor del campo de fecha de ida
+        } else if (fechaRegreso < fechaHoy) {
+            alert('La fecha de regreso no puede ser anterior a la fecha de hoy.');
+            fechaRegresoInput.value = ''; // Restablecer el valor del campo de fecha de regreso
+        } else if (fechaIda > fechaRegreso) {
+            alert('La fecha de regreso no puede ser anterior a la fecha de ida.');
+            fechaRegresoInput.value = ''; // Restablecer el valor del campo de fecha de regreso
+        }
+    });
+
+    fechaRegresoInput.addEventListener('change', function() {
+        const fechaHoy = new Date();
+        const fechaIda = new Date(fechaIdaInput.value);
+        const fechaRegreso = new Date(fechaRegresoInput.value);
+
+        if (fechaIda < fechaHoy) {
+            alert('La fecha de ida no puede ser anterior a la fecha de hoy.');
+            fechaIdaInput.value = ''; // Restablecer el valor del campo de fecha de ida
+        } else if (fechaRegreso < fechaHoy) {
+            alert('La fecha de regreso no puede ser anterior a la fecha de hoy.');
+            fechaRegresoInput.value = ''; // Restablecer el valor del campo de fecha de regreso
+        } else if (fechaIda > fechaRegreso) {
+            alert('La fecha de regreso no puede ser anterior a la fecha de ida.');
+            fechaRegresoInput.value = ''; // Restablecer el valor del campo de fecha de regreso
+        }
+    });
+});
+
+
