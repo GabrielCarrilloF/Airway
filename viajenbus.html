@@ -26,27 +26,23 @@
 
 
     <div class="image-containerbus">
-        <div class="overlaybus">
-            <div class="windowbus">
-
-    <div class="image-containerbus">
-        <div class="overlaybus">
-            <div class="windowbus">
-                
-              <div class="opciones-viajesbus">
-                <button id="idaYVueltaBtnbus" class="seleccionadobus">Ida y vuelta</button>
-                <button id="soloIdaBtnbus">Solo ida</button>
-              </div><br>
-    <div class="search-containerbus"><b>Ciudad origen:</b>
-        <input type="text" id="myInputbus" onkeyup="autocomplete()" placeholder="Ciudad origen...">
-        <div id="autocomplete-listbus" class="autocomplete-itemsbus">
+      <div class="overlaybus">
+          <div class="windowbus">
+              
+            <div class="opciones-viajesbus">
+              <button id="idaYVueltaBtnbus" class="seleccionadobus">Ida y vuelta</button>
+              <button id="soloIdaBtnbus">Solo ida</button>
+            </div><br>
+      <div class="search-containerbus"><b>Ciudad origen:</b>
+          <input type="text" id="myInputOrigenbus" onkeyup="autocompleteOrigen()" placeholder="Ciudad origen...">
+          <div id="autocomplete-listOrigenbus" class="autocomplete-itemsbus">
+          </div>
         </div>
-      </div>
-      <div class="search-containerbus"><b>Ciudad destino:</b>
-        <input type="text" id="myInputbus" onkeyup="autocomplete()" placeholder="Ciudad destino...">
-        <div id="autocomplete-listbus" class="autocomplete-itemsbus">
-        </div>
-      </div>
+        <div class="search-containerbus"><b>Ciudad destino:</b>
+          <input type="text" id="myInputDestinobus" onkeyup="autocompleteDestino()" placeholder="Ciudad destino...">
+          <div id="autocomplete-listDestinobus" class="autocomplete-itemsbus">
+          </div>
+        </div><br>
       <div class="fechaidabus"><b>Fecha ida:</b>
         <input type="date" id="datebus">
       </div>

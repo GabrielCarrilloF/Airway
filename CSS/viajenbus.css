@@ -1,3 +1,39 @@
+body {
+  background-image: url('https://images.ctfassets.net/cfexf643femz/7ffmw1z22uDIYLvOwPWKvc/d7cdd973106b745b58904dd19a36d687/razones-invertir-cartagena-colombia.jpg?w=1136&fm=webp&q=60'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+  align-items: center; 
+  justify-content: center; 
+  margin: 0; 
+ 
+}
+
+.image-containerbus {
+  position: relative;
+}
+
+.image-containerbus img {
+  max-width: 100%;
+  display: block;
+}
+
+.overlaybus {
+  position: fixed; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 80%; 
+  max-height: 80%; 
+  overflow: auto;
+  border-radius: 20px;
+  z-index: 999; 
+}
 
 .windowbus {
     text-align: center;
@@ -131,8 +167,8 @@
 
 .alert-success {
     color: #000000;
-    background-color: #e241029a;
-    border-color: #c3e6cb;
+    background-color: #ffffff;
+    border-color: #e05c04;
 }
 
 .alert-dismissablesup .close {
@@ -160,3 +196,11 @@
     color: #0b2e13;
     text-decoration: underline;
 }
+/* botones con icono de calendario*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: #ff4800; 
+  color: #fff; 
+  padding: 5px; 
+  border-radius: 50%; 
+}
+

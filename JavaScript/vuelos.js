@@ -1,4 +1,9 @@
-var countries = ["Argentina", "Brasil", "Chile", "Colombia", "Ecuador", "Perú", "Uruguay", "Venezuela"];
+var countries = ["Bogotá - El nuevo dorado", "Barranquilla", "Cali", "Cartagena", "Pereira", "Medellín", "Armenia", 
+"Bucaramanga", "Araracuara", "Apartadó", "Arauca", "Bahía Solano", "Barrancabermeja", "Buenaventura", "Corozal", "Cúcuta", 
+"Florencia", "Guapi", "Ibagué", "Ipiales", "La Chorrera", "Leticia", "La Macarena", "La Pedrera", "Puerto Leguizamo", 
+"Manizales", "Mitú", "Neiva", "Nuquí", "Pasto", "Popayán", "Puerto Asís", "Puerto Carreño", "Puerto Inírida", "Providencia Isla", 
+"Quibdó", "Riohacha", "Santa Marta", "San Andrés Isla", "San José de Guaviare", "San Vicente del Caguán", "Saravena", "Tarapacá", 
+"Tame", "Tumaco", "Valledupar", "Villagarzón", "Villavicencio"];
 
 document.addEventListener("DOMContentLoaded", function() {
     var input = document.getElementById("myInput");
@@ -45,7 +50,12 @@ function autocomplete(inputValue) {
 }
 
 /*--------------------*/
-var countries = ["Argentina", "Brasil", "Chile", "Colombia", "Ecuador", "Perú", "Uruguay", "Venezuela"];
+var countries = ["Bogotá - El nuevo dorado", "Barranquilla", "Cali", "Cartagena", "Pereira", "Medellín", "Armenia", 
+"Bucaramanga", "Araracuara", "Apartadó", "Arauca", "Bahía Solano", "Barrancabermeja", "Buenaventura", "Corozal", "Cúcuta", 
+"Florencia", "Guapi", "Ibagué", "Ipiales", "La Chorrera", "Leticia", "La Macarena", "La Pedrera", "Puerto Leguizamo", 
+"Manizales", "Mitú", "Neiva", "Nuquí", "Pasto", "Popayán", "Puerto Asís", "Puerto Carreño", "Puerto Inírida", "Providencia Isla", 
+"Quibdó", "Riohacha", "Santa Marta", "San Andrés Isla", "San José de Guaviare", "San Vicente del Caguán", "Saravena", "Tarapacá", 
+"Tame", "Tumaco", "Valledupar", "Villagarzón", "Villavicencio"];
 
 document.addEventListener("DOMContentLoaded", function() {
     var input = document.getElementById("myInput2");
