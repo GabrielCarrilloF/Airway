@@ -54,7 +54,24 @@ https://templatemo.com/tm-591-villa-agency
     </div>
   </div>
   <!-- ***** Preloader End ***** -->
+  <?php
+    $Name = $_GET['Company'];
+    $connection_obj = mysqli_connect("localhost", "root", "", "Airway");
+if (!$connection_obj) {
+    echo "Error No: " . mysqli_connect_errno();
+    echo "Error Description: " . mysqli_connect_error();
+    exit;
+}
+// Consulta SQL para obtener los códigos de las ciudades
+$query = "SELECT * FROM CompanyBus WHERE NameCompany = '$Name'";
 
+// Ejecutar la consulta SELECT
+$result = mysqli_query($connection_obj, $query) or die(mysqli_error($connection_obj));
+$row = mysqli_fetch_array($result, MYSQLI_BOTH);
+$log = $row['Logo'];
+// close the db connection
+mysqli_close($connection_obj);
+  ?>
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
     <div class="container">
@@ -62,8 +79,8 @@ https://templatemo.com/tm-591-villa-agency
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="../index.html" class="logo">
-              <h1 id="NameCompany">Brasilia</h1>
+            <a href="Company.php" class="logo">
+              <h1 id="NameCompany"><?php echo $Name; ?></h1>
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
@@ -93,7 +110,7 @@ https://templatemo.com/tm-591-villa-agency
     <div class="container">
       <ul class="properties-filter">
         <li>
-          <a class="is_active" href="Company.php" data-filter="*">Ver todo</a>
+          <a class="is_active" href="#" onclick="actualizarPagina()" data-filter="*">Ver todo</a>
         </li>
         <li>
           <a id="modal-394784" href="#modal-container-394784" role="button" class="btn" data-toggle="modal">Agregar</a>
@@ -115,7 +132,7 @@ if (!$connection_obj) {
     exit;
 }
 // Consulta SQL para obtener los códigos de las ciudades
-$query = "SELECT * FROM BusTransportInformation WHERE Compani = 'Brasilia'";
+$query = "SELECT * FROM BusTransportInformation WHERE Compani = '$Name'";
 // Ejecutar la consulta SELECT
 $result = mysqli_query($connection_obj, $query) or die(mysqli_error($connection_obj));
 
@@ -138,7 +155,7 @@ while ($row2 = mysqli_fetch_array($result2, MYSQLI_BOTH)) {
     echo '
     <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
         <div class="item">
-            <a href="property-details.html"><img src="../Images/Companis-icon/Brasilia.png" alt=""></a>
+            <a href="property-details.html"><img src="../'.$log.'" alt=""></a>
             <span class="category">' . $row['Compani'] . '</span>
             <h6>$' . $formatted_price . '</h6>
             <h4><a href="property-details.html">De '.$City_Origen.' a '.$City_Destin.'</a></h4>

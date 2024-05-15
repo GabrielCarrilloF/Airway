@@ -1,3 +1,5 @@
+var url2 = new URL(window.location.href);
+
 var modal = document.getElementById("myModal");
 var span = modal.querySelector(".close-2");
 var acceptModalBtn = modal.querySelector("#acceptModalBtn");
@@ -49,10 +51,9 @@ function showModal(modal) {
         }
     }
 }
-
+function actualizarPagina() {
+    location.reload();
+}
 function removeSuccessParam() {
-    var url = new URL(window.location.href);
-    url.searchParams.delete('success');
-    window.history.pushState({}, '', url.toString());
-    window.location.reload();
+    window.history.back();
 }

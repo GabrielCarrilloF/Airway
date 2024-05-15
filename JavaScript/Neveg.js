@@ -1,7 +1,19 @@
 function updatePage() {
-    window.location.href = "Actualizar.php";
+    let currentUrl = document.URL;
+    let urlParams = new URLSearchParams(currentUrl.split('?')[1]);
+    let companyParam = urlParams.get('Company');
+
+    let newUrl = "Actualizar.php?Company=" + companyParam;
+
+    window.location.href = newUrl;
 }
 
 function DeletePage() {
-    window.location.href = "Eliminar.php";
+    let currentUrl = document.URL;
+    let urlParams = new URLSearchParams(currentUrl.split('?')[1]);
+    let companyParam = urlParams.get('Company');
+
+    let newUrl = "Eliminar.php?Company=" + companyParam;
+
+    window.location.href = newUrl;
 }
