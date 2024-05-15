@@ -42,7 +42,7 @@
                 Origen
               </th>
               <th>
-                Distansia
+                Distansia 
               </th>
               <th>
                 Duracion
@@ -70,15 +70,26 @@
 
                             // Recorrer los resultados de la consulta
                             while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
+                              $query2 = "SELECT * FROM City WHERE CodeCity IN ('$row[CodeCity_Origen]', '$row[CodeCity_Destin]')";
+                              // Ejecutar la consulta SELECT
+                              $result2 = mysqli_query($connection_obj, $query2) or die(mysqli_error($connection_obj));
+
+                              while ($row2 = mysqli_fetch_array($result2, MYSQLI_BOTH)) {
+                                  if ($row2['CodeCity'] == $row['CodeCity_Origen']) {
+                                      $City_Origen = $row2['NameCity'];
+                                  } elseif ($row2['CodeCity'] == $row['CodeCity_Destin']) {
+                                      $City_Destin = $row2['NameCity'];
+                                  }
+                              }                             
                                 echo '<tr class="table-success">
                                 <td>
                                 ' . $row['Id'] . '
                                 </td>
                                 <td>
-                                ' . $row['CodeCity_Origen'] . '
+                                ' . $City_Origen . '
                                 </td>
                                 <td>
-                                ' . $row['CodeCity_Destin'] . '
+                                ' . $City_Destin . '
                                 </td>
                                 <td>
                                 ' . $row['Distance'] . '
@@ -110,7 +121,7 @@
         </table>
       </div>
     </div>
-    <div class="container my-5">
+    <div id="Update" class="container my-5" style="display: none;">
       <center><h2>ACTUALIZAR</h2></center><br>
       <form>
         <div class="row">
@@ -166,8 +177,8 @@
 
 
 <center>
-  <button type="button" class="btn-enviar" id="openModal">Enviar</button>
-
+  <button type="submit" class="btn-enviar" id="openModal">Enviar</button>
+  <button type="button" class="btn-enviar" onclick="FalseUpdate()">Canselar</button>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
