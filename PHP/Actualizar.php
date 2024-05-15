@@ -7,7 +7,6 @@
   <title>Actulizar</title>
   <link rel="stylesheet" href="../CSS/actualizar.css">
 
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -23,10 +22,50 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+     <!-- Bootstrap core CSS -->
+  <link href="../BOOTSTRAP/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="../BOOTSTRAP/assets/css/fontawesome.css">
+<link rel="stylesheet" href="../BOOTSTRAP/assets/css/templatemo-villa-agency.css">
+<link rel="stylesheet" href="../BOOTSTRAP/assets/css/owl.css">
+<link rel="stylesheet" href="../BOOTSTRAP/assets/css/animate.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 </head>
 
 <body>
-  <div class="container-fluid">
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+<header class="header-area header-sticky">
+    
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="Company.php" class="logo">
+              <h1 id="NameCompany">Brasilia</h1>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="Company.php">Home</a></li>
+            </ul>
+
+          </nav>
+        
+  </header>
+<br>
+
+  <div class="container-fluid" id="TableHead">
     <div class="row">
       <div class="col-md-12">
         <table id="Table" class="table table-bordered table-sm">
@@ -132,10 +171,92 @@
             <input type="number" class="form-control" id="ID" name="ID" readonly>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="Origen">
+          <label for="Origen">
               Origen
             </label>
-            <input type="text" class="form-control" id="Origen" name="Origen">
+          <select name="Origen" id="Origen" class="form-control" required>
+                            
+                            <option value="Acacias">Acacias</option>
+                            <option value="Aguachica">Aguachica</option>
+                            <option value="Apartadó">Apartadó</option>
+                            <option value="Arauca">Arauca</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Barbosa">Barbosa</option>
+                            <option value="Barrancabermeja">Barrancabermeja</option>
+                            <option value="Barranquilla">Barranquilla</option>
+                            <option value="Bogotá">Bogotá</option>
+                            <option value="Bosconia">Bosconia</option>
+                            <option value="Bucaramanga">Bucaramanga</option>
+                            <option value="Buenaventura">Buenaventura</option>
+                            <option value="Buga">Buga</option>
+                            <option value="Cali">Cali</option>
+                            <option value="Cartagena">Cartagena</option>
+                            <option value="Caucasia">Caucasia</option>
+                            <option value="Cereté">Cereté</option>
+                            <option value="Chiquinquirá">Chiquinquirá</option>
+                            <option value="Ciénaga">Ciénaga</option>
+                            <option value="Corozal">Corozal</option>
+                            <option value="Coveñas">Coveñas</option>
+                            <option value="Cúcuta">Cúcuta</option>
+                            <option value="Duitama">Duitama</option>
+                            <option value="El Banco">El Banco</option>
+                            <option value="El Carmen de Bolívar">El Carmen de Bolívar</option>
+                            <option value="El Socorro">El Socorro</option>
+                            <option value="Espinal">Espinal</option>
+                            <option value="Florencia">Florencia</option>
+                            <option value="Fundación">Fundación</option>
+                            <option value="Fusagasugá">Fusagasugá</option>
+                            <option value="Garzón">Garzón</option>
+                            <option value="Girardot">Girardot</option>
+                            <option value="Granada">Granada</option>
+                            <option value="Guamal">Guamal</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Ibagué">Ibagué</option>
+                            <option value="Ipiales">Ipiales</option>
+                            <option value="La Apartada">La Apartada</option>
+                            <option value="La Dorada">La Dorada</option>
+                            <option value="La Plata">La Plata</option>
+                            <option value="Lorica">Lorica</option>
+                            <option value="Magangué">Magangué</option>
+                            <option value="Maicao">Maicao</option>
+                            <option value="Manizales">Manizales</option>
+                            <option value="Medellín">Medellín</option>
+                            <option value="Melgar">Melgar</option>
+                            <option value="Mocoa">Mocoa</option>
+                            <option value="Mompox">Mompox</option>
+                            <option value="Montería">Montería</option>
+                            <option value="Neiva">Neiva</option>
+                            <option value="Ocaña">Ocaña</option>
+                            <option value="Paipa">Paipa</option>
+                            <option value="Palmira">Palmira</option>
+                            <option value="Pamplona">Pamplona</option>
+                            <option value="Pasto">Pasto</option>
+                            <option value="Pereira">Pereira</option>
+                            <option value="Pitalito">Pitalito</option>
+                            <option value="Planeta Rica">Planeta Rica</option>
+                            <option value="Plato">Plato</option>
+                            <option value="Popayán">Popayán</option>
+                            <option value="Puerto Berrío">Puerto Berrío</option>
+                            <option value="Puerto Boyacá">Puerto Boyacá</option>
+                            <option value="Quibdó">Quibdó</option>
+                            <option value="Riohacha">Riohacha</option>
+                            <option value="Sahagún">Sahagún</option>
+                            <option value="Salento">Salento</option>
+                            <option value="San Gil">San Gil</option>
+                            <option value="San Onofre">San Onofre</option>
+                            <option value="Santa Marta">Santa Marta</option>
+                            <option value="Sincelejo">Sincelejo</option>
+                            <option value="Sogamoso">Sogamoso</option>
+                            <option value="Toluviejo">Toluviejo</option>
+                            <option value="Tuluá">Tuluá</option>
+                            <option value="Tunja">Tunja</option>
+                            <option value="Turbo">Turbo</option>
+                            <option value="Valledupar">Valledupar</option>
+                            <option value="Villavicencio">Villavicencio</option>
+                            <option value="Yopal">Yopal</option>
+                          </select>
+            
+            
           </div>
         </div>
         <div class="row">
@@ -143,7 +264,87 @@
             <label for="Destin">
               Destino
             </label>
-            <input type="text" class="form-control" id="Destin" name="Destin">
+            Destino: <select name="Destin" id="Destin" class="form-control" required>
+                            
+                            <option value="Acacias">Acacias</option>
+                            <option value="Aguachica">Aguachica</option>
+                            <option value="Apartadó">Apartadó</option>
+                            <option value="Arauca">Arauca</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Barbosa">Barbosa</option>
+                            <option value="Barrancabermeja">Barrancabermeja</option>
+                            <option value="Barranquilla">Barranquilla</option>
+                            <option value="Bogotá">Bogotá</option>
+                            <option value="Bosconia">Bosconia</option>
+                            <option value="Bucaramanga">Bucaramanga</option>
+                            <option value="Buenaventura">Buenaventura</option>
+                            <option value="Buga">Buga</option>
+                            <option value="Cali">Cali</option>
+                            <option value="Cartagena">Cartagena</option>
+                            <option value="Caucasia">Caucasia</option>
+                            <option value="Cereté">Cereté</option>
+                            <option value="Chiquinquirá">Chiquinquirá</option>
+                            <option value="Ciénaga">Ciénaga</option>
+                            <option value="Corozal">Corozal</option>
+                            <option value="Coveñas">Coveñas</option>
+                            <option value="Cúcuta">Cúcuta</option>
+                            <option value="Duitama">Duitama</option>
+                            <option value="El Banco">El Banco</option>
+                            <option value="El Carmen de Bolívar">El Carmen de Bolívar</option>
+                            <option value="El Socorro">El Socorro</option>
+                            <option value="Espinal">Espinal</option>
+                            <option value="Florencia">Florencia</option>
+                            <option value="Fundación">Fundación</option>
+                            <option value="Fusagasugá">Fusagasugá</option>
+                            <option value="Garzón">Garzón</option>
+                            <option value="Girardot">Girardot</option>
+                            <option value="Granada">Granada</option>
+                            <option value="Guamal">Guamal</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Ibagué">Ibagué</option>
+                            <option value="Ipiales">Ipiales</option>
+                            <option value="La Apartada">La Apartada</option>
+                            <option value="La Dorada">La Dorada</option>
+                            <option value="La Plata">La Plata</option>
+                            <option value="Lorica">Lorica</option>
+                            <option value="Magangué">Magangué</option>
+                            <option value="Maicao">Maicao</option>
+                            <option value="Manizales">Manizales</option>
+                            <option value="Medellín">Medellín</option>
+                            <option value="Melgar">Melgar</option>
+                            <option value="Mocoa">Mocoa</option>
+                            <option value="Mompox">Mompox</option>
+                            <option value="Montería">Montería</option>
+                            <option value="Neiva">Neiva</option>
+                            <option value="Ocaña">Ocaña</option>
+                            <option value="Paipa">Paipa</option>
+                            <option value="Palmira">Palmira</option>
+                            <option value="Pamplona">Pamplona</option>
+                            <option value="Pasto">Pasto</option>
+                            <option value="Pereira">Pereira</option>
+                            <option value="Pitalito">Pitalito</option>
+                            <option value="Planeta Rica">Planeta Rica</option>
+                            <option value="Plato">Plato</option>
+                            <option value="Popayán">Popayán</option>
+                            <option value="Puerto Berrío">Puerto Berrío</option>
+                            <option value="Puerto Boyacá">Puerto Boyacá</option>
+                            <option value="Quibdó">Quibdó</option>
+                            <option value="Riohacha">Riohacha</option>
+                            <option value="Sahagún">Sahagún</option>
+                            <option value="Salento">Salento</option>
+                            <option value="San Gil">San Gil</option>
+                            <option value="San Onofre">San Onofre</option>
+                            <option value="Santa Marta">Santa Marta</option>
+                            <option value="Sincelejo">Sincelejo</option>
+                            <option value="Sogamoso">Sogamoso</option>
+                            <option value="Toluviejo">Toluviejo</option>
+                            <option value="Tuluá">Tuluá</option>
+                            <option value="Tunja">Tunja</option>
+                            <option value="Turbo">Turbo</option>
+                            <option value="Valledupar">Valledupar</option>
+                            <option value="Villavicencio">Villavicencio</option>
+                            <option value="Yopal">Yopal</option>
+                          </select>
           </div>
           <div class="col-md-6 mb-3">
             <label for="Distance">
@@ -194,6 +395,13 @@
 
     <!--JS-->
     <script src="../JavaScript/Update.js"></script>
+    <!-- Bootstrap core JavaScript -->
+  <script src="../BOOTSTRAP/vendor/jquery/jquery.min.js"></script>
+  <script src="../BOOTSTRAP/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../BOOTSTRAP/assets/js/isotope.min.js"></script>
+  <script src="../BOOTSTRAP/assets/js/owl-carousel.js"></script>
+  <script src="../BOOTSTRAP/assets/js/counter.js"></script>
+  <script src="../BOOTSTRAP/assets/js/custom.js"></script>
 
 </body>
 
