@@ -90,3 +90,23 @@ function autocomplete(inputValue) {
         autocompleteList.style.display = "none"; // Ocultar la lista si no hay coincidencias
     }
 }
+
+const idaYVueltaBtn = document.getElementById('idaYVueltaBtn');
+const soloIdaBtn = document.getElementById('soloIdaBtn');
+const fechaRegresoInput = document.getElementById('dater');
+
+idaYVueltaBtn.addEventListener('click', function() {
+  // Marcar el botón "Ida y vuelta" como seleccionado y desmarcar el botón "Solo ida"
+  idaYVueltaBtn.classList.add('seleccionado');
+  soloIdaBtn.classList.remove('seleccionado');
+  // Habilitar el campo de fecha de regreso
+  fechaRegresoInput.disabled = false;
+});
+
+soloIdaBtn.addEventListener('click', function() {
+  // Marcar el botón "Solo ida" como seleccionado y desmarcar el botón "Ida y vuelta"
+  soloIdaBtn.classList.add('seleccionado');
+  idaYVueltaBtn.classList.remove('seleccionado');
+  // Deshabilitar el campo de fecha de regreso
+  fechaRegresoInput.disabled = true;
+});
