@@ -164,28 +164,119 @@ select {
   color: white;
 }
 
-.contenedor-mensajes {
+.container-ventanasdv {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end; 
+  justify-content: center;
+  align-items: flex-end;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 20px;
 }
 
-.mensajes {
-  border-radius: 5px;
-  max-width: 30%;
+.ventanadv {
+  width: 30%; /* Ancho de cada ventana */
+  margin: 0 10px; /* Espacio entre ventanas */
+  background-color: #ffffff86;
   padding: 20px;
-  background-color: #fdf5f1;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-right: 10px;
 }
 
-.container-mensajesuperior {
-  background-color: #ff3300;
+
+.container-ventanaemail {
+  display: flex;
+  justify-content: flex-start; /* Ajuste para alinear a la izquierda */
+  align-items: flex-end;
+  position:sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
 }
 
+.ventanaemail {
+  width: 30%;
+  margin: 0 10px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translate(3%, 300%);
+}
+.ventanaemail h3 {
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.ventanaemail input[type="email"] {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #000; 
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.ventanaemail button[type="submit"] {
+  background-color: #fff;
+  color: #ff4800;
+  border: 1px solid #ff4800; 
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 30%;
+}
+
+.ventanaemail button[type="submit"]:hover {
+  background-color: #ff4800;
+  color: #fff; /* Cambia el color al pasar el mouse */
+}
+
+.container-ventanaofertas {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%; 
+}
+
+.ventanaofertas {
+  position: absolute; /* Posición absoluta para controlar la ubicación */
+  top: 50%; /* Coloca el borde superior en el centro vertical de la pantalla */
+  left: 50%; /* Coloca el borde izquierdo en el centro horizontal de la pantalla */
+  transform: translate(46%, -30%); /* Centra el contenido */
+  width: 60%; /* Ancho de la ventana */
+  max-width: 750px; /* Ancho máximo de la ventana */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.container-infofertas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infofertas img {
+  width: 100%; /* Controla el tamaño de la imagen al 100% del contenedor */
+  height: 100%; /* Ajusta la altura automáticamente */
+  border-radius: 10px; /* Borde redondeado */
+  margin: 10px 0; /* Margen superior e inferior */
+
+}
+.ventanaofertas {
+  display: flex; /* Para que los contenedores se coloquen uno al lado del otro */
+}
+
+.container-infofertas {
+  width: 50%; /* O el porcentaje deseado para el ancho de cada ventana */
+  padding: 20px;
+}
 

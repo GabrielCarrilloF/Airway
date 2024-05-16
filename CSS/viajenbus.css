@@ -210,7 +210,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .ventanad {
   width: 30%; /* Ancho de cada ventana */
   margin: 0 10px; /* Espacio entre ventanas */
-  background-color: #f0f0f0;
+  background-color: #ff480017;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -234,6 +234,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: translate(5%, 50%);
 }
 .ventanaemail h3 {
   color: #000000;
@@ -278,7 +279,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   position: absolute; /* Posición absoluta para controlar la ubicación */
   top: 50%; /* Coloca el borde superior en el centro vertical de la pantalla */
   left: 50%; /* Coloca el borde izquierdo en el centro horizontal de la pantalla */
-  transform: translate(55%, -20%); /* Centra el contenido */
+  transform: translate(55%, -10%); /* Centra el contenido */
   width: 60%; /* Ancho de la ventana */
   max-width: 750px; /* Ancho máximo de la ventana */
   padding: 20px;

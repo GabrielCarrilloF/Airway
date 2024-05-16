@@ -120,3 +120,5 @@ soloIdaBtn.addEventListener('click', function() {
   // Deshabilitar el campo de fecha de regreso
   fechaRegresoInput.disabled = true;
 });
+
+
