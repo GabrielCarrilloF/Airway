@@ -310,3 +310,31 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 50%; /* O el porcentaje deseado para el ancho de cada ventana */
   padding: 20px;
 }
+
+/*------------ radio button aviones o bus*/
+.opciones-transporte {
+  display: flex;
+  flex-direction:row;
+  gap: 10px;
+  max-width: 260px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ffab7a;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.opciones-transporte input[type="radio"] {
+  margin-left: 10px;
+}
+
+.volverinicio {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: inline-block;
+}

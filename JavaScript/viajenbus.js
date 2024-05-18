@@ -9,25 +9,25 @@ var countries = ["Acacias", "Aguachica", "Apartadó", "Arauca", "Armenia", "Barb
 document.addEventListener("DOMContentLoaded", function() {
     var inputOrigen = document.getElementById("myInputOrigenbus");
     var inputDestino = document.getElementById("myInputDestinobus");
-    var autocompleteListOrigen = document.getElementById("autocomplete-listOrigenbus");
-    var autocompleteListDestino = document.getElementById("autocomplete-listDestinobus");
+    var autocompleteOrigen = document.getElementById("autocomplete-origen");
+    var autocompleteDestino = document.getElementById("autocomplete-destino");
 
     inputOrigen.addEventListener("input", function() {
-        autocompleteOrigen(inputOrigen.value.toLowerCase(), autocompleteListOrigen);
+        autocompleteInput(inputOrigen.value.toLowerCase(), autocompleteOrigen, inputOrigen);
     });
 
     inputDestino.addEventListener("input", function() {
-        autocompleteDestino(inputDestino.value.toLowerCase(), autocompleteListDestino);
+        autocompleteInput(inputDestino.value.toLowerCase(), autocompleteDestino, inputDestino);
     });
 
     document.addEventListener("click", function(event) {
         if (event.target !== inputOrigen && event.target !== inputDestino) {
-            autocompleteListOrigen.innerHTML = "";
-            autocompleteListDestino.innerHTML = "";
+            autocompleteOrigen.innerHTML = "";
+            autocompleteDestino.innerHTML = "";
         }
     });
 
-    function autocompleteOrigen(inputValue, listElement) {
+    function autocompleteInput(inputValue, listElement, inputElement) {
         listElement.innerHTML = "";
 
         if (inputValue.length === 0) {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var option = document.createElement("div");
             option.textContent = match;
             option.addEventListener("click", function() {
-                inputOrigen.value = match;
+                inputElement.value = match;
                 listElement.innerHTML = "";
             });
             listElement.appendChild(option);
@@ -51,76 +51,23 @@ document.addEventListener("DOMContentLoaded", function() {
         listElement.style.display = matches.length > 0 ? "block" : "none";
     }
 
-    function autocompleteDestino(inputValue, listElement) {
-        listElement.innerHTML = "";
-
-        if (inputValue.length === 0) {
-            return;
-        }
-
-        var matches = countries.filter(function(country) {
-            return country.toLowerCase().includes(inputValue);
-        });
-
-        matches.forEach(function(match) {
-            var option = document.createElement("div");
-            option.textContent = match;
-            option.addEventListener("click", function() {
-                inputDestino.value = match;
-                listElement.innerHTML = "";
-            });
-            listElement.appendChild(option);
-        });
-
-        listElement.style.display = matches.length > 0 ? "block" : "none";
-    }
-});
-
-
-const idaYVueltaBtn = document.getElementById('idaYVueltaBtnbus');
-const soloIdaBtn = document.getElementById('soloIdaBtnbus');
-const fechaRegresoInput = document.getElementById('daterbus');
-
-idaYVueltaBtn.addEventListener('click', function() {
-    idaYVueltaBtn.classList.add('seleccionado');
-    soloIdaBtn.classList.remove('seleccionado');
-    fechaRegresoInput.disabled = false;
-});
-
-soloIdaBtn.addEventListener('click', function() {
-    soloIdaBtn.classList.add('seleccionado');
-    idaYVueltaBtn.classList.remove('seleccionado');
-    fechaRegresoInput.disabled = true;
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const fechaIdaInput = document.getElementById('datebus');
+    const idaYVueltaBtn = document.getElementById('idaYVueltaBtnbus');
+    const soloIdaBtn = document.getElementById('soloIdaBtnbus');
     const fechaRegresoInput = document.getElementById('daterbus');
 
-    fechaIdaInput.addEventListener('change', function() {
-        const fechaIda = new Date(fechaIdaInput.value);
-        const fechaRegreso = new Date(fechaRegresoInput.value);
-
-        if (fechaIda > fechaRegreso) {
-            alert('La fecha de regreso no puede ser anterior a la fecha de ida.');
-            fechaRegresoInput.value = ''; // Restablecer el valor del campo de fecha de regreso
-        }
+    idaYVueltaBtn.addEventListener('click', function() {
+        idaYVueltaBtn.classList.add('seleccionado');
+        soloIdaBtn.classList.remove('seleccionado');
+        fechaRegresoInput.disabled = false;
     });
 
-    fechaRegresoInput.addEventListener('change', function() {
-        const fechaIda = new Date(fechaIdaInput.value);
-        const fechaRegreso = new Date(fechaRegresoInput.value);
-
-        if (fechaIda > fechaRegreso) {
-            alert('La fecha de regreso no puede ser anterior a la fecha de ida.');
-            fechaRegresoInput.value = ''; // Restablecer el valor del campo de fecha de regreso
-        }
+    soloIdaBtn.addEventListener('click', function() {
+        soloIdaBtn.classList.add('seleccionado');
+        idaYVueltaBtn.classList.remove('seleccionado');
+        fechaRegresoInput.disabled = true;
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
     const fechaIdaInput = document.getElementById('datebus');
-    const fechaRegresoInput = document.getElementById('daterbus');
 
     fechaIdaInput.addEventListener('change', function() {
         const fechaHoy = new Date();

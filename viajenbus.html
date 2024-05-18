@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUSES/AIRWAY</title>
+    <title>VIAJES/AIRWAY</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/viajenbus.css">
@@ -34,10 +34,11 @@
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100" src="Images/bus slide 2.jpg" alt="Second slide">
+                                        <img class="d-block w-100" src="Images/avion slide.jpg" alt="Second slide">
                                         <div class="carousel-caption d-none d-md-block">
                                   
                                         </div>
+                                        
                                     </div>
                                     
                                 </div>
@@ -68,20 +69,29 @@
     <div class="image-containerbus">
       <div class="overlaybus">
           <div class="windowbus">
+
+            
             <h4><b>ELIGE EL MEJOR VIAJE PARA TU PRÓXIMA AVENTURA!</b></h4>
-            <br>
+            <br><div class="opciones-transporte">
+              <div class="avion">AVION
+                <input type="radio" id="avion" name="transporte">
+              </div>
+              <div class="autobus">AUTOBUS
+                <input type="radio" id="atobus" name="transporte">
+              </div>
+            </div><br>
             <div class="opciones-viajesbus">
               <button id="idaYVueltaBtnbus" class="seleccionadobus">Ida y vuelta</button>
               <button id="soloIdaBtnbus">Solo ida</button>
             </div><br>
       <div class="search-containerbus"><b>Ciudad origen:</b>
           <input type="text" id="myInputOrigenbus" onkeyup="autocompleteOrigen()" placeholder="Ciudad origen...">
-          <div id="autocomplete-listOrigenbus" class="autocomplete-itemsbus">
+          <div id="autocomplete-origen" class="origen">
           </div>
         </div>
         <div class="search-containerbus"><b>Ciudad destino:</b>
           <input type="text" id="myInputDestinobus" onkeyup="autocompleteDestino()" placeholder="Ciudad destino...">
-          <div id="autocomplete-listDestinobus" class="autocomplete-itemsbus">
+          <div id="autocomplete-destino" class="destino">
           </div>
         </div><br>
       <div class="fechaidabus"><b>Fecha ida:</b>
@@ -109,6 +119,9 @@
 			<button type="button" class="buscar-vuelosbus">
 				<b>BUSCAR</b>
 			</button>
+      <button type="button" class="volverinicio">
+        <a href="index.html">🏠<b></b></a>
+    </button>
 		</div>
     </div>
 </div>
