@@ -1,0 +1,24 @@
+/* Estilos para el contenedor principal y los botones */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.button-container fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.button-container button {
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
