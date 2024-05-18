@@ -425,7 +425,7 @@ mysqli_close($connection_obj);
       <h4>¡Listo!</h4>
       <img src="../Images/chulito verde.gif" alt="Chulito animado">
       <p><b>Todo salio de acurdo a lo esperado!</b></p>
-      <button id="acceptModalBtn" class="acceptModalBtn">Aceptar</button>
+      <button id="acceptModalBtn"  class="acceptModalBtn">Aceptar</button>
     </div>
   </div>
   <div id="myotromodal" class="modal2-2">

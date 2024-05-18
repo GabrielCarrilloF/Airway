@@ -171,59 +171,9 @@
       </center><br>
       <form action="Drop.php" method="post">
 
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="modal fade" id="modal-container-432069" role="dialog" aria-labelledby="myModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="myModalLabel">
-                        Eliminar oferta
-                      </h5>
-                      <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">×</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <span>¿Estás seguro de que quieres eliminar esa oferta? Recuerda que no podrás recuperarla. Si es
-                        así, por favor te pido que rectifiques y, si es necesario, continúa.</span><span
-                        class="mt-md block"></span>
-                      <br />
-                      <br />
-                      <span>Además, por seguridad, necesito tu número de trabajador para saber quién eliminó la
-                        oferta.</span>
-                      <br><br>
-                      <div class="form-group">
-                        <label for="EmployeeCode">
-                          Codigo del trabajador
-                        </label>
-                        <input type="number" class="form-control" id="EmployeeCode" placeholder=" xxxxxx " required />
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-
-                    <button type="submit" class="btn btn-primary" id="eliminarBtn">
-                        Eliminar
-                    </button>
-
-                    <!-- Botón Cerrar Modal -->
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        Close
-                    </button>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-        </div>
 
         <div class="row">
+          
           <div class="col-md-6 mb-3">
             <label for="ID">
               Identificador de viaje
@@ -264,6 +214,12 @@
             </label>
             <input type="number" class="form-control" id="Price" name="Price" readonly>
           </div>
+          <div class="form-group">
+                        <label for="EmployeeCode">
+                          Codigo del trabajador
+                        </label>
+                        <input type="number" class="form-control" id="EmployeeCode" placeholder=" xxxxxx " required />
+                      </div>
         </div>
         <br>
 
@@ -276,9 +232,10 @@
 
 
         <center>
-          <a id="modal-432069" href="#modal-container-432069" role="button" class="btn-enviar"
-            data-toggle="modal">Eliminar</a>
-          <button type="button" class="btn-enviar" onclick="FalseUpdate()">Canselar</button>
+        <button type="submit" class="btn btn-primary" >
+                        Eliminar
+                    </button>
+          <button type="button" class="btn btn-primary" onclick="FalseUpdate()">Canselar</button>
 
 
         </center>
