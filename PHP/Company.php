@@ -79,7 +79,7 @@ mysqli_close($connection_obj);
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="Company.php" class="logo">
+            <a href="#" onclick="HomePage()" class="logo">
               <h1 id="NameCompany"><?php echo $Name; ?></h1>
             </a>
             <!-- ***** Logo End ***** -->
@@ -422,10 +422,10 @@ mysqli_close($connection_obj);
   <div id="myModal" class="modal-2">
     <div class="modal-content-2">
       <span class="close-2">&times;</span>
-      <h4>¡FELICIDADES CACHON!</h4>
+      <h4>¡Listo!</h4>
       <img src="../Images/chulito verde.gif" alt="Chulito animado">
-      <p><b>MUY BIEN, TU TIQUETE FUE COMPRADO CON EXITO POR FIN TE VAS A LARGAR!</b></p>
-      <button id="acceptModalBtn" class="acceptModalBtn">Aceptar</button>
+      <p><b>Todo salio de acurdo a lo esperado!</b></p>
+      <button id="acceptModalBtn"  class="acceptModalBtn">Aceptar</button>
     </div>
   </div>
   <div id="myotromodal" class="modal2-2">

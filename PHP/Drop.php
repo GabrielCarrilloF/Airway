@@ -10,7 +10,7 @@ $Id = $_POST['ID'];
 
 if ($Id == "") {
     // Redirigir a otro archivo HTML y mostrar un alert de NO éxito
-    header("Location: Eliminar.php?success=false");
+    header("Location: Company.php?success=false");
     exit();
 }
 
@@ -21,11 +21,11 @@ $result = mysqli_query($connection_obj, $query) or die(mysqli_error($connection_
 
 if ($result) {
     // Redirigir a otro archivo HTML y mostrar un alert de éxito
-    header("Location: Eliminar.php?success=true");
+    header("Location: Company.php?success=true");
     exit();
 } else {
     // Redirigir a otro archivo HTML y mostrar un alert de NO éxito
-    header("Location: Eliminar.php?success=false");
+    header("Location: Company.php?success=false");
     exit();
 }
 ?>

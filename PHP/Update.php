@@ -14,8 +14,7 @@ $Duration = $_POST['Duration'];
 $Price = $_POST['Price'];
 
 if ($City1==$City2){
-    
-    header("Location: Actualizar.php?success=false");
+    header("Location: Company.php?success=false");
     exit();
 }
 
@@ -46,11 +45,11 @@ $resul = mysqli_query($connection_obj, $query);
 
 if ($resul) {
     // Redirigir a otro archivo HTML y mostrar un alert de éxito
-    header("Location: Actualizar.php?success=true");
+    header("Location: Company.php?success=true");
     exit();
 } else {
     // Redirigir a otro archivo HTML y mostrar un alert de NO éxito
-    header("Location: Actualizar.php?success=false");
+    header("Location: Company.php?success=false");
     exit();
 }
 // close the db connection

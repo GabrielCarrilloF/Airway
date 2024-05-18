@@ -22,38 +22,33 @@ window.onload = function() {
 function showModal(modal) {
     modal.style.display = "block";
 
+
     if (modal === modal2) {
         span2.onclick = function() {
             modal.style.display = "none";
-            removeSuccessParam();
+
         }
 
         acceptModalBtn2.onclick = function() {
             modal.style.display = "none";
-            removeSuccessParam();
+            
         }
     } else {
         span.onclick = function() {
             modal.style.display = "none";
-            removeSuccessParam();
+            
         }
 
         acceptModalBtn.onclick = function() {
             modal.style.display = "none";
-            removeSuccessParam();
+            
         }
     }
 
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
-            removeSuccessParam();
+            
         }
     }
-}
-function actualizarPagina() {
-    location.reload();
-}
-function removeSuccessParam() {
-    window.history.back();
 }
