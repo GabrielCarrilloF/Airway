@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="../CSS/alert.css">
      <!-- Bootstrap core CSS -->
   <link href="../BOOTSTRAP/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -64,18 +64,32 @@ $log = $row['Logo'];
 // close the db connection
 mysqli_close($connection_obj);
   ?>
+
+
+  <script>
+        function HomePage() {
+            let currentUrl = document.URL;
+            let urlParams = new URLSearchParams(currentUrl.split('?')[1]);
+            let companyParam = urlParams.get('Company');
+
+            let newUrl = "Company.php?Company=" + companyParam;
+
+            window.location.href = newUrl;
+        }
+    </script>
   <!-- ***** Preloader End ***** -->
 <header class="header-area header-sticky">
     
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="#" class="logo">
+            <a href="#" onclick="HomePage()" class="logo">
               <h1 id="NameCompany"><?php echo $Name; ?></h1>
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="#">Home</a></li>
+              <li><a href="#" onclick="actualizarPagina()">Actulizar</a></li>
+              <li><a href="#" onclick="HomePage()">Home</a></li>
             </ul>
 
           </nav>

@@ -32,9 +32,11 @@
   <link rel="stylesheet" href="../BOOTSTRAP/assets/css/owl.css">
   <link rel="stylesheet" href="../BOOTSTRAP/assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../CSS/alert.css">
 </head>
 
 <body>
+  
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -51,13 +53,14 @@
 
     <nav class="main-nav">
       <!-- ***** Logo Start ***** -->
-      <a href="Company.php" class="logo">
+      <a href="#" onclick="HomePage()" class="logo">
         <h1 id="NameCompany">Brasilia</h1>
       </a>
       <!-- ***** Logo End ***** -->
       <!-- ***** Menu Start ***** -->
       <ul class="nav">
-        <li><a href="#" onclick="actualizarPagina()">Home</a></li>
+      <li><a href="#" onclick="actualizarPagina()">Actulizar</a></li>
+        <li><a href="#" onclick="HomePage()">Home</a></li>
       </ul>
 
     </nav>
@@ -201,12 +204,14 @@
                     </div>
                     <div class="modal-footer">
 
-                      <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" id="eliminarBtn">
                         Eliminar
-                      </button>
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    </button>
+
+                    <!-- Botón Cerrar Modal -->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
                         Close
-                      </button>
+                    </button>
                     </div>
                   </div>
 
@@ -297,6 +302,17 @@
         <script src="../BOOTSTRAP/assets/js/counter.js"></script>
         <script src="../BOOTSTRAP/assets/js/custom.js"></script>
 
+        <script>
+        function HomePage() {
+            let currentUrl = document.URL;
+            let urlParams = new URLSearchParams(currentUrl.split('?')[1]);
+            let companyParam = urlParams.get('Company');
+
+            let newUrl = "Company.php?Company=" + companyParam;
+
+            window.location.href = newUrl;
+        }
+    </script>
 </body>
 
 </html>
