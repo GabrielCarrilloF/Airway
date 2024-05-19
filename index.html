@@ -445,7 +445,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form role="form" action="PHP/Prove.php" method="post">
+                  <form role="form" action="PHP/Connection/MYSQLConnet.php" method="post">
                     <div class="container-fluid">
                       <div class="row">
                         <div class="col-md-12">
@@ -472,7 +472,7 @@
                         <a href="#" class="Frgot">Olvide mi contraseña</a>
                       </div>
                       <div class="right-side">
-                        <a href="registrar.htm" class="LogUS">Registrarse</a>
+                        <a id="modal-203746" href="#modal-container-203746" role="button" class="LogUS" data-toggle="modal">Registrarme</a>
                       </div>
                     </div>
                     <div class="modal-footer">
@@ -565,7 +565,61 @@
       </div>
       <button id="toggle-button" onclick="toggleChat()">Abrir Chat</button>
 
-      <a href="PHP/Company.php">Eto es el admin</a>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+             
+            
+            <div class="modal fade" id="modal-container-203746" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  
+                  <div class="modal-body">
+                    <div class="container-fluid">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <lt>
+                            <lt class="lt-highlighter__wrapper">
+                              <lt class="lt-highlighter__scroll-element">
+                                <canvas class="lt-highlighter__canvas">
+                                </canvas>
+                              </lt>
+                            </lt>
+                          </lt>
+                          <h3 class="text-center">
+                            Bienvenido a AIRWAY
+                          </h3>
+                          <form role="form" action="PHP/Clasification.php" method="post">
+                            <div class="form-group">
+                              <label for="Type">
+                                  ¿Qué tipo de usuario quieres ser?
+                              </label>
+                              <select class="form-control" name="Type" id="Type">
+                                  <option value="Pasajero">Pasajero</option>
+                                  <option value="Compañía de Bus">Compañía de Bus</option>
+                                  <option value="Compañía de vuelos">Compañía de vuelos</option>
+                                  <option value="Conductor">Conductor</option>
+                                  <option value="Proveedor de transporte">Proveedor de transporte</option>
+                              </select>
+                          </div>
+                          <a href="HTML/RegistrarCompany.html">hola</a>
+                            <button type="submit" class="btn btn-primary">
+                              Siguinte
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
       <footer>
         <div class="container">
           <div class="col-lg-8">

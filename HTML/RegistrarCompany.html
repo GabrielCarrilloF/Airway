@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar tu conpañía</title>
+    <link rel="stylesheet" href="../CSS/registrar.css">
+</head>
+<body>
+    <form action="../PHP/Nuewuser/Company.php" method="post" onsubmit="return validarFormulario()" enctype="multipart/form-data">
+        <div class="container-registrar">
+            <h1>REGISTRAR</h1>
+                    <br>
+            <div class="nombre-apellido">
+                <div class="nombre-registrar">
+                    <label for="nombreusuario"><b>Nombre de la conpañía</b></label>
+                    <input type="text" class="name-user" name="nombreusuario" id="nombreusuario" required/>
+                </div>
+            </div>
+            <div class="email-registrar">
+                <label for="emailusuario"><b>Nombre de usuario</b></label>
+                <input type="email" class="email-user" name="emailusuario" id="emailusuario" required/>
+            </div>
+            <div class="email-registrar">
+                <label for="email"><b>Correo electronico</b></label>
+                <input type="email" class="email-user" name="email" id="email" required/>
+            </div>
+
+            <div class="Logo">
+                <label for="email"><b>Logo de la Compañía</b></label>
+                <input type="file" class="Logo" name="Logo" id="Logo" accept="image/png" required/>
+            </div>
+
+            <div class="contraseña-registrar">
+                <label for="contraseñausuario"><b>Contraseña de administrador</b></label>
+                <input type="password" class="contraseña-user" name="contraseñausuario" id="contraseñausuario" required/>
+            </div>
+            <div class="confirmar-registrar">
+                <label for="confirmarusuario"><b>Confirmar contraseña</b></label>
+                <input type="password" class="confirmar-user" name="confirmarusuario" id="confirmarusuario" required/>
+            </div>
+            <span id="mensajeError" class="error"></span>
+            <button type="submit">REGISTRAR AHORA</button>
+        </div>
+
+    </form>
+<script>
+        function validarFormulario() {
+            const password = document.getElementById('contraseñausuario').value;
+            const confirmPassword = document.getElementById('confirmarusuario').value;
+
+            if (password !== confirmPassword) {
+                document.getElementById('mensajeError').innerText = 'Las contraseñas no coinciden';
+                return false; // Evita que se envíe el formulario
+            }
+
+            return true; // Envía el formulario si todo está correcto
+        }
+    </script>
+</body>
+</html>
+

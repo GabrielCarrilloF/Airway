@@ -47,13 +47,37 @@
     </div>
   </div>
   <?php
-    $Name = $_GET['Company'];
+
     $connection_obj = mysqli_connect("localhost", "root", "", "Airway");
 if (!$connection_obj) {
     echo "Error No: " . mysqli_connect_errno();
     echo "Error Description: " . mysqli_connect_error();
     exit;
 }
+
+$Name = ""; // Inicializar $Name para evitar errores si no se encuentra ningún resultado
+
+$N = "SELECT UName FROM TemporalCompany";
+// Ejecutar la consulta SELECT
+$result1 = mysqli_query($connection_obj, $N) or die(mysqli_error($connection_obj));
+
+// Verificar si hay resultados
+if (mysqli_num_rows($result1) > 0) {
+    // Obtener la primera fila de resultados
+    $row = mysqli_fetch_assoc($result1);
+    
+    // Verificar si la columna UName existe en la fila
+    if (isset($row['UName'])) {
+        $Name = $row['UName'];
+        // Utilizar el valor de $Name según tus necesidades
+    } else {
+        echo "La columna UName no está definida en los resultados.";
+    }
+} else {
+    echo "No se encontraron resultados en TemporalCompany.";
+}
+
+
 // Consulta SQL para obtener los códigos de las ciudades
 $query = "SELECT * FROM CompanyBus WHERE NameCompany = '$Name'";
 
@@ -72,7 +96,7 @@ mysqli_close($connection_obj);
             let urlParams = new URLSearchParams(currentUrl.split('?')[1]);
             let companyParam = urlParams.get('Company');
 
-            let newUrl = "Company.php?Company=" + companyParam;
+            let newUrl = "Company.php";
 
             window.location.href = newUrl;
         }
@@ -135,7 +159,7 @@ mysqli_close($connection_obj);
                                 exit;
                             }
                             // Consulta SQL para obtener los códigos de las ciudades
-                            $query = "SELECT * FROM BusTransportInformation WHERE Compani = 'Brasilia'";
+                            $query = "SELECT * FROM BusTransportInformation WHERE Compani = '$Name'";
                             // Ejecutar la consulta SELECT
                             $result = mysqli_query($connection_obj, $query) or die(mysqli_error($connection_obj));
 

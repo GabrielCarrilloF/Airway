@@ -55,23 +55,57 @@ https://templatemo.com/tm-591-villa-agency
   </div>
   <!-- ***** Preloader End ***** -->
   <?php
-    $Name = $_GET['Company'];
-    $connection_obj = mysqli_connect("localhost", "root", "", "Airway");
+// Conexión a la base de datos
+$connection_obj = mysqli_connect("localhost", "root", "", "Airway");
 if (!$connection_obj) {
     echo "Error No: " . mysqli_connect_errno();
     echo "Error Description: " . mysqli_connect_error();
     exit;
 }
-// Consulta SQL para obtener los códigos de las ciudades
+
+$Name = ""; // Inicializar $Name para evitar errores si no se encuentra ningún resultado
+
+$N = "SELECT UName FROM TemporalCompany";
+// Ejecutar la consulta SELECT
+$result1 = mysqli_query($connection_obj, $N) or die(mysqli_error($connection_obj));
+
+// Verificar si hay resultados
+if (mysqli_num_rows($result1) > 0) {
+    // Obtener la primera fila de resultados
+    $row = mysqli_fetch_assoc($result1);
+    
+    // Verificar si la columna UName existe en la fila
+    if (isset($row['UName'])) {
+        $Name = $row['UName'];
+        // Utilizar el valor de $Name según tus necesidades
+    } else {
+        echo "La columna UName no está definida en los resultados.";
+    }
+} else {
+    echo "No se encontraron resultados en TemporalCompany.";
+}
+
+// Consulta SQL para obtener los datos de CompanyBus utilizando $Name
 $query = "SELECT * FROM CompanyBus WHERE NameCompany = '$Name'";
 
 // Ejecutar la consulta SELECT
 $result = mysqli_query($connection_obj, $query) or die(mysqli_error($connection_obj));
-$row = mysqli_fetch_array($result, MYSQLI_BOTH);
-$log = $row['Logo'];
-// close the db connection
+
+// Verificar si hay resultados
+if (mysqli_num_rows($result) > 0) {
+    // Obtener la primera fila de resultados
+    $row = mysqli_fetch_assoc($result);
+    
+    // Obtener el valor de Logo
+    $log = $row['Logo'];
+} else {
+    echo "No se encontraron resultados en CompanyBus para el nombre: $Name";
+}
+
+// Cerrar la conexión a la base de datos
 mysqli_close($connection_obj);
-  ?>
+?>
+
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
     <div class="container">
@@ -80,12 +114,14 @@ mysqli_close($connection_obj);
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="#" onclick="HomePage()" class="logo">
-              <h1 id="NameCompany"><?php echo $Name; ?></h1>
+              <h1 id="NameCompany">
+                <?php echo $Name; ?>
+              </h1>
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="../index.html">Salir</a></li>
+              <li><a href="Connection/MYSLDisconnect.php">Salir</a></li>
             </ul>
 
           </nav>
@@ -174,16 +210,16 @@ while ($row2 = mysqli_fetch_array($result2, MYSQLI_BOTH)) {
 mysqli_close($connection_obj);
 ?>
       </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="pagination">
-            <li><a href="#">↑</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <ul class="pagination">
+        <li><a href="#">↑</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
   </div>
   <div class="container-fluid">
     <div class="row">
@@ -403,7 +439,7 @@ mysqli_close($connection_obj);
                           <label for="Company">
                             Empresa
                           </label>
-                          <input type="text" class="form-control" name="Company" id="Company" readonly>
+                          <input type="text" class="form-control" name="Company" value="<?php echo $Name; ?>" readonly>
                         </div>
                         <button type="submit" class="btn btn-primary">
                           Guardar
@@ -425,7 +461,7 @@ mysqli_close($connection_obj);
       <h4>¡Listo!</h4>
       <img src="../Images/chulito verde.gif" alt="Chulito animado">
       <p><b>Todo salio de acurdo a lo esperado!</b></p>
-      <button id="acceptModalBtn"  class="acceptModalBtn">Aceptar</button>
+      <button id="acceptModalBtn" class="acceptModalBtn">Aceptar</button>
     </div>
   </div>
   <div id="myotromodal" class="modal2-2">
