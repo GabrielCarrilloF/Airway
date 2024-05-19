@@ -106,8 +106,8 @@
     gap: 20px;
     max-width: 90%; /* Para asegurar que se ajuste en pantallas pequeñas */
     margin: 0 auto; /* Centrar en el eje X */
-    margin-top: 2cm; /* Establecer margen superior de 5 cm */
-    margin-bottom: 5cm; /* Establecer margen inferior de 5 cm */
+    margin-top: 1cm; /* Establecer margen superior de 5 cm */
+    margin-bottom: 1cm; /* Establecer margen inferior de 5 cm */
 }
 
 .flight-time {
