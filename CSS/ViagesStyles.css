@@ -1,0 +1,182 @@
+.container1 {
+    width: 90%;
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-box form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.trip-type {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.trip-type label {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 15px;
+    min-width: 150px;
+    margin-right: 15px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-group input:hover {
+    border-bottom: 3px solid;
+    border-bottom-color: rgb(206, 110, 21);
+}
+
+.search-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-end;
+}
+
+
+.search-button:hover {
+    background-color: #444;
+}
+
+@media (max-width: 600px) {
+    .search-box form {
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .search-button {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+.flight-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Cambio para columnas en dispositivos pequeños */
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    max-width: 90%; /* Para asegurar que se ajuste en pantallas pequeñas */
+    margin: 0 auto; /* Centrar en el eje X */
+    margin-top: 2cm; /* Establecer margen superior de 5 cm */
+    margin-bottom: 5cm; /* Establecer margen inferior de 5 cm */
+}
+
+.flight-time {
+    text-align: center;
+}
+
+.time {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.airport {
+    display: block;
+    font-size: 16px;
+    color: #555;
+}
+
+.flight-details {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.direct {
+    display: block;
+    color: #007bff;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.plane {
+    display: block;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.duration {
+    display: block;
+    font-size: 16px;
+    color: #555;
+}
+
+.price {
+    text-align: right;
+}
+
+.currency {
+    display: block;
+    font-size: 16px;
+    color: #555;
+}
+
+.amount {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .flight-card {
+        flex-direction: row; /* Vuelve a filas en pantallas medianas y grandes */
+        max-width: 80%; /* Ajusta el ancho para pantallas medianas */
+    }
+}
+
+@media (min-width: 1024px) {
+    .flight-card {
+        max-width: 60%; /* Ajusta el ancho para pantallas grandes */
+    }
+}
