@@ -158,7 +158,7 @@ if (mysqli_num_rows($result) > 0) {
           <span class="currency">Por persona</span>
       </div>
       <div class="price">
-          <span class="amount"><a href="#" id="' . $row['Id'] . '">' . $row['Compani'] . '</a></span>
+          <span class="amount"><a href="#" onclick="enviarDatos(' . $row['Id'] . ')">' . $row['Compani'] . '</a></span>
       </div>
     </div>';
     }
@@ -170,11 +170,29 @@ if (mysqli_num_rows($result) > 0) {
     // No se encontraron resultados, manejar el caso según sea necesario
     echo "No se encontraron resultados para la ciudad especificada.";
 }
-
-
-  // close the db connection
-  mysqli_close($connection_obj);
 ?>
+<script>
+function enviarDatos(id_etiqueta) {
+    // Obtener los valores de las variables PHP
+    var Origen = '<?php echo $Origen; ?>';
+    var Destino = '<?php echo $Destino; ?>';
+    var Fecha_Ida = '<?php echo $Fecha_Ida; ?>';
+    var Fecha_Regreso = '<?php echo $Fecha_Regreso; ?>';
+    var NPasajeros = '<?php echo $NPasajeros; ?>';
+
+    // Construir la URL con los parámetros
+    var url = 'EquipajePasajeros.php?ID_etiqueta=' + encodeURIComponent(id_etiqueta) +
+              '&Origen=' + encodeURIComponent(Origen) +
+              '&Destino=' + encodeURIComponent(Destino) +
+              '&Fecha_Ida=' + encodeURIComponent(Fecha_Ida) +
+              '&Fecha_Regreso=' + encodeURIComponent(Fecha_Regreso) +
+              '&NPasajeros=' + encodeURIComponent(NPasajeros);
+
+    // Redirigir a otro archivo PHP con los datos
+    window.location.href = url;
+}
+</script>
+
     <!-- Bootstrap core JavaScript -->
   <script src="../BOOTSTRAP/vendor/jquery/jquery.min.js"></script>
   <script src="../BOOTSTRAP/vendor/bootstrap/js/bootstrap.min.js"></script>
