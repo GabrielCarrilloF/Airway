@@ -2,17 +2,13 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <title>Ageda tus Viajes</title>
+  <title>Agenda tus Viajes</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Bootstrap core CSS -->
   <link href="BOOTSTRAP/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -62,13 +58,11 @@ https://templatemo.com/tm-591-villa-agency
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="properties.html">Hoteles</a></li>
-              <li><a href="BucarVuelos.html"><i class="fa-solid fa-plane fa-beat-fade"></i> Vuelos</a></li>
-              <li><a href="BucarBus.html" class="active"><i class="fa-solid fa-bus fa-beat-fade"></i> Viajer en bus</a></li>
-              <li><a href="contact.html">Contactanos</a></li>
-              <li><a id="modal-765830" href="#modal-container-765830" role="button" data-toggle="modal">Iniciar
-                  Sesion</a></li>
+              <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="properties.html">Hoteles</a></li>
+                <li><a href="BucarVuelos.html"><i class="fa-solid fa-plane fa-beat-fade"></i> Vuelos</a></li>
+                <li><a href="contact.html">Pide un vehículo!</a></li>
+              <li><a id="modal-765830" href="#modal-container-765830" role="button" data-toggle="modal">Iniciar Sesion</a></li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -85,135 +79,108 @@ https://templatemo.com/tm-591-villa-agency
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <span class="breadcrumb"><a href="index.html">Home</a> / Encuntra tu mejor destino</span>
+          <span class="breadcrumb"><a href="index.html">Home</a> / Encuentra tu mejor destino</span>
           <h3>Viaja con Airway</h3>
         </div>
       </div>
     </div>
   </div>
-<br>
-<div class="container1">
-  <div class="search-box">
+  <br>
+  <div class="container1">
+    <div class="search-box">
       <form id="flight-search-form" action="HTML/Consultas.php" method="post">
-          <div class="trip-type">
-              <label>
-                  <input type="radio" name="trip" value="round-trip" checked> Ida y vuelta
-              </label>
-              <label>
-                  <input type="radio" name="trip" value="one-way"> Solo ida
-              </label>
-          </div>
-          <div class="form-group">
-              <label for="origin">Origen</label>
-              <input type="text" id="origin" name="origin" placeholder="Origen" required style="font-family: 'Font Awesome 5 Free';">
-          </div>
-          <div class="form-group">
-              <label for="destination">Destino</label>
-              <input type="text" id="destination" name="destination" placeholder="Destino" required style="font-family: 'Font Awesome 5 Free';">
-          </div>
-          <div class="form-group">
-              <label for="departure-date">Fecha de Ida</label>
-              <input type="date" id="departure-date" name="departure-date" value="2024-05-22" required>
-          </div>
-          <div class="form-group" id="return-date-group">
-              <label for="return-date">Fecha de Vuelta</label>
-              <input type="date" id="return-date" name="return-date" disabled>
-          </div>
-          <div class="form-group">
-              <label for="passengers">Pasajeros</label>
-              <input type="number" id="passengers" name="passengers" placeholder="&#xf007; +1" min="1" max="5" required style="font-family: 'Font Awesome 5 Free';">
+        <div class="trip-type">
+          <label>
+            <input type="radio" name="trip" value="round-trip" checked> Ida y vuelta
+          </label>
+          <label>
+            <input type="radio" name="trip" value="one-way"> Solo ida
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="origin">Origen</label>
+          <input type="text" id="origin" name="origin" placeholder="Origen" required style="font-family: 'Font Awesome 5 Free';">
+        </div>
+        <div class="form-group">
+          <label for="destination">Destino</label>
+          <input type="text" id="destination" name="destination" placeholder="Destino" required style="font-family: 'Font Awesome 5 Free';">
+        </div>
+        <div class="form-group">
+          <label for="departure-date">Fecha de Ida</label>
+          <input type="date" id="departure-date" name="departure-date" value="2024-05-22" required>
+        </div>
+        <div class="form-group" id="return-date-group">
+          <label for="return-date">Fecha de Vuelta</label>
+          <input type="date" id="return-date" name="return-date" disabled>
+        </div>
+        <div class="form-group">
+          <label for="passengers">Pasajeros</label>
+          <input type="number" id="passengers" name="passengers" placeholder="&#xf007; +1" min="1" max="5" required style="font-family: 'Font Awesome 5 Free';">
+        </div>
 
-          </div>
-          
-          <button type="submit" class="search-button">Buscar</button>
+        <button type="submit" class="search-button">Buscar</button>
       </form>
+    </div>
   </div>
-</div>
 
-<div class="flight-card">
-  <div class="flight-time">
+  <div class="flight-card">
+    <div class="flight-time departure">
       <span class="time">06:19</span>
       <span class="airport">BOG</span>
-  </div>
-  <div class="flight-details">
-      <span class="direct">Directo</span>
+    </div>
+    <div class="flight-details">
       <span class="plane">✈</span>
       <span class="duration">1h 6m</span>
-  </div>
-  <div class="flight-time">
+    </div>
+    <div class="flight-time arrival">
       <span class="time">07:25</span>
       <span class="airport">AXM</span>
-  </div>
-  <div class="price">
+    </div>
+    <div class="price">
       <span class="currency">COP</span>
       <span class="amount">181.440</span>
+    </div>
   </div>
-</div>
 
-<a href="HTML/Consultas.html">Es este bby</a>
-
-<script>
-  const returnDateInput = document.getElementById('return-date');
-  const oneWayRadio = document.querySelector('input[name="trip"][value="one-way"]');
-
-  // Función para habilitar o deshabilitar la fecha de vuelta
-  function toggleReturnDate() {
-    returnDateInput.disabled = oneWayRadio.checked;
-  }
-
-  // Llamar a la función al cargar la página para establecer el estado inicial
-  toggleReturnDate();
-
-  // Agregar un event listener al radio button para detectar cambios
-  document.querySelectorAll('input[name="trip"]').forEach(function(radio) {
-    radio.addEventListener('change', toggleReturnDate);
-  });
-</script>
-
-  <div class="section best-deal">
-    <div class="container-ventanaemail">
-      <div class="ventanaemail">
-        <center>
-        <h3>Ofertas únicas para tí a tu correo!</h3>
-      </center>
-        <input type="email" name="emailusuario" id="emailusuario" placeholder="Ingresa tu email...">
-        <button type="submit">¡RECIBIR OFERTAS!</button>
+ 
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="alert alert-info" role="alert">
+          <h4 class="alert-heading">¡Ofertas Exclusivas para Ti!</h4>
+          <p>Reserva ahora y obtén un 20% de descuento en tu próximo vuelo. Además, disfruta de beneficios adicionales al unirte a nuestro programa de fidelidad. <a href="HTML/Ofertas.html" class="alert-link">¡Descubre más aquí!</a></p>
+        </div>
       </div>
     </div>
-    
-    <div class="container-ventanaofertas">
-      <div class="ventanaofertas">
-        <center>
-          <h1>OFERTAS!</h1>
-        </center>
-        <hr>
-        <div class="container-infofertas">
-          <div class="infofertas">
-            <h3><b>De Cali a Cartagena</b></h3>
-        <a href="#"><img src="BOOTSTRAP/assets/images/property-1.jpg" alt=""></a>
-        <B>$45USD</B>
-    
-      </div>
-    </div>
-    
-    <div class="container-infofertas">
-      <div class="infofertas">
-        <h3><b>De Yopal a Medellín</b></h3>
-    <a href="#"><img src="BOOTSTRAP/assets/images/property-5.jpg" alt=""></a>
-    <B>$30USD</B>
-      </div>
-    </div>
-      </div>
-    </div>     
   </div>
+  
+
+  <a href="HTML/Consultas.html">Es este bby</a>
+
+  <script>
+    const returnDateInput = document.getElementById('return-date');
+    const oneWayRadio = document.querySelector('input[name="trip"][value="one-way"]');
+
+    // Función para habilitar o deshabilitar la fecha de vuelta
+    function toggleReturnDate() {
+      returnDateInput.disabled = oneWayRadio.checked;
+    }
+
+    // Llamar a la función al cargar la página para establecer el estado inicial
+    toggleReturnDate();
+
+    // Agregar un event listener al radio button para detectar cambios
+    document.querySelectorAll('input[name="trip"]').forEach(function (radio) {
+      radio.addEventListener('change', toggleReturnDate);
+    });
+  </script>
 
   <footer class="footer-no-gap">
     <div class="container">
       <div class="col-lg-12">
         <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
 
-          Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a
-            href="https://themewagon.com">ThemeWagon</a></p>
+          Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
       </div>
     </div>
   </footer>
