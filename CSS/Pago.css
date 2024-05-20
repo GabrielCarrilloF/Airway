@@ -1,0 +1,236 @@
+.container1 {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.payment-section, .summary-section {
+    padding: 20px;
+    width: 50%;
+}
+
+.payment-section {
+    border-right: 1px solid #ddd;
+}
+
+h1, h2 {
+    margin: 0 0 10px;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.payment-button.active {
+    background-color: #ddd;
+}
+
+.card-details {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.card-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card-input button {
+    background-color: #f1f1f1;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card-icons img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.summary-section h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.flight-info {
+    margin: 20px 0;
+}
+
+.flight-info p {
+    margin: 5px 0;
+}
+
+.details-button {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.total-payment {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    text-align: right;
+}
+
+.total-payment p {
+    margin: 5px 0;
+}
+
+.total-payment strong {
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.payment-icons {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.payment-icons img {
+    width: 40px;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.expiration-cvv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.expiration-cvv div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.expiration-cvv div:not(:last-child) {
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button.cancel-btn {
+    background-color: #ddd;
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.submit-btn {
+    background-color: #000;
+    color: white;
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.cancel-btn:hover {
+    background-color: #ccc;
+}
+
+button.submit-btn:hover {
+    background-color: #333;
+}
