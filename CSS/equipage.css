@@ -1,5 +1,4 @@
 
-
 .container1 {
     max-width: 600px;
     margin: 20px auto;
@@ -7,6 +6,42 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+button {
+    text-size-adjust: 100%;
+    --flow-header-layout-breakpoint: 640px;
+    --journey-control-layout-breakpoint: 991px;
+    --vw: 811px;
+    --vh: 6.49px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    visibility: unset!important;
+    font-family: "Red Hat Display",sans-serif;
+    background: none;
+    border: 0;
+    font-size: 1.25rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+    font-weight: 700;
+    line-height: 1.323;
+    border-radius: 100vh;
+    border-width: 2px;
+    border-style: solid;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.06s linear;
+    color: #fff;
+    border-color: #1B1B1B;
+    background-color: #1B1B1B;
+    min-width: 6.25rem;
+    flex: 0 1 auto;
+    padding: .75rem 1.0625rem;
+    margin: .3125rem;
 }
 
 h2 {

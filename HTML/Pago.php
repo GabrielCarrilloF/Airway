@@ -1,3 +1,39 @@
+<?php
+// Recuperar los datos de la URL
+$ID_etiqueta = $_GET['ID_etiqueta'];
+$Origen = $_GET['Origen'];
+$Destino = $_GET['Destino'];
+$Fecha_Ida = $_GET['Fecha_Ida'];
+$Fecha_Regreso = $_GET['Fecha_Regreso'];
+$NPasajeros = $_GET['NPasajeros'];
+
+$connection_obj = mysqli_connect("localhost", "root", "", "Airway");
+  if (!$connection_obj) {
+      echo "Error No: " . mysqli_connect_errno();
+      echo "Error Description: " . mysqli_connect_error();
+      exit;
+  }
+// Puedes trabajar con los datos aquí según sea necesario
+
+$query = "SELECT * from bustransportinformation where Id = '$ID_etiqueta'";
+
+    // Ejecutar la consulta SELECT
+    $result = mysqli_query($connection_obj, $query) or die(mysqli_error($connection_obj));
+    $row = mysqli_fetch_array($result, MYSQLI_BOTH);
+    $price = $row['Price'];
+    // Valor inicial
+$formatted_price = number_format($price, 0, '.', '.');
+
+// Convertir el valor formateado a un número
+$price_number = intval(str_replace('.', '', $formatted_price)); // Elimina los puntos y convierte a entero
+
+// Multiplicar por 2
+$precio_doble = $price_number * $NPasajeros;
+
+// Formatear el resultado nuevamente si es necesario
+$formatted_double_price = number_format($precio_doble, 0, '.', '.');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,45 +81,7 @@
           </div>
         </div>
       </header>
-      <h2>Pasajeros</h2>
-        <p>Ingresa el nombre y primer apellido (de cada pasajero) tal y como aparecen en el pasaporte o documento de identidad.</p>
-      <div class="container1">
-        <form>
-            <div class="form-group">
-                <label for="genero">Género*</label>
-                <select id="genero" required>
-                    <option value="" disabled selected>Seleccione</option>
-                    <option value="male">Masculino</option>
-                    <option value="female">Femenino</option>
-                    <option value="other">Otro</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="primerNombre">Primer nombre*</label>
-                <input type="text" id="primerNombre" required>
-            </div>
-            <div class="form-group">
-                <label for="primerApellido">Primer apellido*</label>
-                <input type="text" id="primerApellido" required>
-            </div>
-            <div class="form-group">
-                <label for="fechaNacimiento">Fecha de nacimiento*</label>
-                <input type="date" id="fechaNacimiento" required>
-            </div>
-            <div class="form-group">
-                <label for="nacionalidad">Nacionalidad*</label>
-                <input type="text" id="nacionalidad" required>
-            </div>
-            <div class="form-group">
-                <label for="viajeroFrecuente">Programa de viajero frecuente (opcional)</label>
-                <select id="viajeroFrecuente">
-                    <option value="noAplica">No aplica</option>
-                    <!-- Additional options if necessary -->
-                </select>
-            </div>
-        </form>
-    </div>
-    <!-- Bootstrap core JavaScript -->
+          <!-- Bootstrap core JavaScript -->
     <script src="../BOOTSTRAP/vendor/jquery/jquery.min.js"></script>
   <script src="../BOOTSTRAP/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="../BOOTSTRAP/assets/js/isotope.min.js"></script>
