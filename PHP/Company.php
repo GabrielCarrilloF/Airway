@@ -245,7 +245,13 @@ mysqli_close($connection_obj);
                           <label for="EmployeeCode">
                             Codigo del trabajador
                           </label>
-                          <input type="number" class="form-control" id="EmployeeCode" placeholder=" xxxxxx " required />
+                          <input type="number" class="form-control" id="EmployeeCode" name="EmployeeCode" placeholder=" xxxxxx " required />
+                        </div>
+                        <div class="form-group">
+                          <label for="Hora">
+                            Hora de salida
+                          </label>
+                          <input type="Time" class="form-control" id="Hora" name="Hora" placeholder=" 12:22pm " required />
                         </div>
                         <div class="form-group">
                           Origen: <select name="City1" id="City1" class="form-control" required>

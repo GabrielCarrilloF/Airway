@@ -12,6 +12,8 @@ $Distance = $_POST['Distance'];
 $Duration = $_POST['Duration'];
 $Price = $_POST['Price'];
 $Company = $_POST['Company'];
+$EmployeeCode = $_POST['EmployeeCode'];
+$Hora = $_POST['Hora'];
 
 if ($City1==$City2){
     // Redirigir a otro archivo HTML y mostrar un alert de NO éxito
@@ -34,8 +36,10 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)) {
 }
 
 // prepare the insert query
-$query = "INSERT INTO BusTransportInformation(CodeCity_Origen,CodeCity_Destin,Distance,duration_time,Price,Compani)
-VALUES ('". mysqli_real_escape_string($connection_obj, $CodeCity_Origen) ."','"
+$query = "INSERT INTO BusTransportInformation(CheckOutTime,ManagerCodigo,CodeCity_Origen,CodeCity_Destin,Distance,duration_time,Price,Compani)
+VALUES ('". mysqli_real_escape_string($connection_obj, $Hora) ."','"
+          . mysqli_real_escape_string($connection_obj, $EmployeeCode) ."','"
+          . mysqli_real_escape_string($connection_obj, $CodeCity_Origen) ."','"
           . mysqli_real_escape_string($connection_obj, $CodeCity_Destin) ."','"
           . mysqli_real_escape_string($connection_obj, $Distance) ."','"
           . mysqli_real_escape_string($connection_obj, $Duration) ."','"
